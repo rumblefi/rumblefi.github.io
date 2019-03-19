@@ -1,0 +1,1 @@
+$(".structure__list li").on("click",function(s){s.stopPropagation();var t=$(this),e=$(this).children(".structure__sub-list");e.hasClass("open")?($(this).find(".structure__sub-list").removeClass("open"),t.removeClass("structure__item--active")):(e.addClass("open"),t.addClass("structure__item--active"))});
