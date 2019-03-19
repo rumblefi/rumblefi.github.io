@@ -18223,6 +18223,7 @@ a {
 
 }
 
-.form *{
-	user-select: all !important;
+input,
+textarea {
+	user-select: initial !important;
 }
