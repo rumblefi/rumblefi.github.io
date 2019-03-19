@@ -307,7 +307,7 @@ $(function () {
 
 	reponsiveHeightEl(".news-carousel__headline",'font-size',25);
 
-	reponsiveHeightEl(".news-left__vertical",'font-size', 40);
+	reponsiveHeightEl(".news__vertical",'font-size', 40);
 
 	reponsiveHeightEl(".news-card__bottom",'font-size', 14);
 
@@ -352,5 +352,17 @@ $(function () {
 		
 	});
 
+
+	$('.info-tooltip-label').on('click', function () {
+		$(this).find('.info-tooltip').toggleClass('is-shown');
+	}).on('mouseenter', function() {
+		if( $(window).width() > 768 ) {
+			$(this).find('.info-tooltip').addClass('is-shown');
+		}
+	}).on('mouseleave', function() {
+		if( $(window).width() > 768 ) {
+			$(this).find('.info-tooltip').removeClass('is-shown');
+		}
+	})
 
 })
