@@ -263,6 +263,11 @@ html {
 	width: 100%
 }
 
+input{
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
 body {
 	margin: 0;
 	width: 100%;
@@ -10251,7 +10256,8 @@ input[type=submit].styler[disabled] {
 	padding: 0;
 	background-color: transparent;
 	-webkit-appearance: none;
-	border: 0;
+	border-radius: 0;
+	border: none;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding-left: 60px;
