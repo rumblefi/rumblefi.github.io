@@ -179,7 +179,8 @@ $(function () {
 	}), $(".js-press").length && $(".js-press").on("click", function () {
 		$(this).closest(".for-press").toggleClass("expanded")
 	}), $(".js-clear").length && $(".js-clear").on("click", function () {
-		$(this).closest("form")[0].reset()
+		$(this).closest("form")[0].reset();
+		$(this).removeClass('is-shown');
 	}), $("video[autoplay]").lebgth && $("video[autoplay]").each(function () {
 		this.play()
 	});
@@ -291,7 +292,23 @@ $(function () {
 $(function () {
 
 	$('.glossary-letters__item').on('click', function () {
-		$(this).addClass('is-active').siblings().removeClass('is-active');
+
+		var letterAttr = $(this).attr('data-letter'); 
+		var target = $('.glossary-group__letter[data-letter="'+ letterAttr +'"]')
+
+		if(target) {
+
+			var targetOffset = $(target).offset().top;
+			var headerHeight = $(".page-header").outerHeight()
+			var targetScrollTop = targetOffset - headerHeight; 
+	
+			$('html, body').animate({
+				scrollTop: targetScrollTop
+			}, 500);
+			$(this).addClass('is-active').siblings().removeClass('is-active');
+
+		} 
+
 	});
 
 	function reponsiveHeightEl(target,prop,ratio) {
@@ -315,9 +332,7 @@ $(function () {
 
 	reponsiveHeightEl(".news-left__link",'font-size', 16);
 
-	reponsiveHeightEl(".news-carousel__bg",'padding-top', 480);
-
-	reponsiveHeightEl(".news-carousel__bg",'padding-top', 480);
+	reponsiveHeightEl(".news-carousel__bg",'height', 480);
 
 	reponsiveHeightEl(".white-block__img",'height', 480);
 
@@ -364,5 +379,15 @@ $(function () {
 			$(this).find('.info-tooltip').removeClass('is-shown');
 		}
 	})
+
+	$('.modal-form__field').on('input', function () {
+		if( $(this).val().length > 0 ) {
+			$(this).siblings('.modal-form__clear').addClass('is-shown');
+		}
+		else{
+			$(this).siblings('.modal-form__clear').removeClass('is-shown');
+		}
+	});
+
 
 })
