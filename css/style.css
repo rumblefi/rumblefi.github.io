@@ -18392,4 +18392,46 @@ textarea {
     padding-bottom: 60px;
   }
 }
+
+.modal-form__mail,
+.right-panel__mail {
+  cursor: pointer;
+}
+
+.services-top__wrapper {
+  padding-bottom: 0 !important;
+}
+
+.services-top {
+  margin-bottom: 100px;
+}
+
+.industry__wrapper {
+  padding-bottom: 50px;
+}
+
+.three-tiles__wrapper {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.vacancy-page--1 {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .vacancy-page--1 {
+    margin-bottom: 100px !important;
+  }
+}
+
+.search-page .wrapper-calc {
+  padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .search-page .wrapper-calc {
+    padding-bottom: 100px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

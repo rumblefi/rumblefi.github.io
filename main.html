@@ -33,10 +33,10 @@
         <input type="hidden" name="language" value="ru">
         <input type="hidden" name="language" value="en">
         <button class="lang-block__link">eng</button>
-      </form><a class="right-panel__item right-panel__mail" href="mailto:test@mail.ru">
+      </form><div class="right-panel__item right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
         <svg width="30" height="22">
           <use xlink:href="img/svg.svg#mail-sm"></use>
-        </svg></a>
+        </svg></div>
       <div class="right-panel__item right-panel__search">
         <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
           <svg width="28" height="28">
@@ -351,15 +351,15 @@
       <div class="modal _search modal--line">
         <button class="modal__close js-close" data-target="popupSearch" type="button"></button>
         <div class="modal__inner">
-          <div class="right-panel modal__right-panel"><a class="right-panel__mail" href="mailto:test@mail.ru">
+          <div class="right-panel modal__right-panel"><div class="right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
               <svg width="30" height="22">
                 <use xlink:href="img/svg.svg#mail-sm"></use>
-              </svg></a></div>
+              </svg></div></div>
           <form class="modal-form" action="#" method="post">
-            <div class="modal-form__field-wrapper"><a class="modal-form__mail" href="mailto:test@mail.ru">
+            <div class="modal-form__field-wrapper"><div class="modal-form__mail js-modal-trigger" data-target="popupSendMessage" >
                 <svg width="30" height="22">
                   <use xlink:href="img/svg.svg#mail-sm"></use>
-                </svg></a>
+                </svg></div>
               <label class="modal-form__label" for="search-field"><span class="visually-hidden">Поиск</span>
                 <svg width="28" height="28">
                   <use xlink:href="img/svg.svg#search-sm"></use>
@@ -385,10 +385,10 @@
       </button>
       <div class="popup__inner">
         <div class="send-message">
-          <div class="right-panel send-message__right-panel"><a class="right-panel__mail" href="mailto:test@mail.ru">
+          <div class="right-panel send-message__right-panel"><div class="right-panel__mail" data-target="popupSendMessage" >
               <svg width="30" height="22">
                 <use xlink:href="img/svg.svg#mail-sm"></use>
-              </svg></a>
+              </svg></div>
             <div class="right-panel__search">
               <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
                 <svg width="28" height="28">
@@ -418,6 +418,7 @@
             <div class="form__item input-form">
               <input class="input-form__input" type="text" name="name" id="name">
               <label class="input-form__label" for="name">Имя</label>
+              <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
             </div>
             <div class="form__item input-form">
               <input class="input-form__input" type="text" name="email" id="email">
@@ -456,10 +457,10 @@
       </button>
       <div class="popup__inner">
         <div class="send-message">
-          <div class="right-panel send-message__right-panel"><a class="right-panel__mail" href="mailto:test@mail.ru">
+          <div class="right-panel send-message__right-panel"><div class="right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
               <svg width="30" height="22">
                 <use xlink:href="img/svg.svg#mail-sm"></use>
-              </svg></a>
+              </svg></div>
             <div class="right-panel__search">
               <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
                 <svg width="28" height="28">
@@ -468,12 +469,12 @@
               </button>
             </div>
           </div>
-          <form class="form popup__form vacancy-test__form send-message__form" id="form" action="#" method="post">
+          <div class="popup__form vacancy-test__form send-message__form">
             <div class="send-message__text">
               <p>Мы получили ваше сообщение и уже работаем с ним.</p>
               <p>Спасибо!</p>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
