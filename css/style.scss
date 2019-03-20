@@ -366,7 +366,8 @@ body.overflow .intro__video-bg {
 
 @media (max-width:768px) {
 	.wrapper-calc {
-		width: 100%
+		width: 100%;
+		padding-bottom: 100px;
 	}
 }
 
@@ -11403,6 +11404,11 @@ input[type=submit].styler[disabled] {
 	background-color: #fff;
 	z-index: 1;
 	padding-bottom: 200px;
+
+	@include sm() {
+		padding-bottom: 100px !important;
+	}
+
 }
 
 .news-announces__wrapper {
@@ -11422,7 +11428,8 @@ input[type=submit].styler[disabled] {
 
 @media (max-width:768px) {
 	.main-page .news-announces__wrapper {
-		padding: 2.8rem 0 11rem 20px
+		padding: 2.8rem 0 11rem 20px;
+		padding-bottom: 0;
 	}
 }
 
@@ -12162,7 +12169,8 @@ input[type=submit].styler[disabled] {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
-		flex-direction: column
+		flex-direction: column;
+		padding-bottom: 50px;
 	}
 }
 
@@ -12527,7 +12535,8 @@ input[type=submit].styler[disabled] {
 
 @media (max-width:768px) {
 	.half-bg__yellow {
-		padding-top: 4.5rem
+		padding-top: 30px;
+		padding-bottom: 100px !important;
 	}
 }
 
@@ -13629,7 +13638,8 @@ input[type=submit].styler[disabled] {
 	.article {
 		font-size: 14px;
 		line-height: 1.43;
-		padding: 5.7rem 0
+		padding: 5.7rem 0;
+		padding-bottom: 100px !important;
 	}
 }
 
@@ -14010,7 +14020,8 @@ input[type=submit].styler[disabled] {
 	.vacancy-test {
 		padding-top: 0;
 		font-size: 21px;
-		padding-right: 20px
+		padding-right: 20px;
+		padding-bottom: 0 !important;
 	}
 }
 
@@ -14191,7 +14202,7 @@ input[type=submit].styler[disabled] {
 .one-slider {
 	position: relative;
 	margin-top: 45px;
-	margin-bottom: 45px
+	margin-bottom: 45px;
 }
 
 .one-slider__control {
@@ -14416,6 +14427,11 @@ input[type=submit].styler[disabled] {
 
 .contacts-page {
 	margin-bottom: 200px;
+
+	@include sm() {
+		margin-bottom: 50px;
+	}
+
 }
 
 .contacts-page__vertical {
@@ -14695,6 +14711,8 @@ input[type=submit].styler[disabled] {
 	.error-page__content {
 		padding: 190px 20px 50px;
 		font-size: 18px;
+		padding-top: 140px;
+		padding-bottom: 0;
 	}
 }
 
@@ -14746,7 +14764,8 @@ input[type=submit].styler[disabled] {
 @media (max-width:768px) {
 	.search-page {
 		padding-left: 40px;
-		padding-top: 100px
+		padding-top: 100px;
+		padding-bottom: 0;
 	}
 }
 
@@ -15291,7 +15310,8 @@ input[type=submit].styler[disabled] {
 
 @media (max-width:768px) {
 	.industry {
-		padding: 3.3rem 0 4.8rem
+		padding: 3.3rem 0 4.8rem;
+		padding-bottom: 0;
 	}
 }
 
@@ -15715,7 +15735,8 @@ input[type=submit].styler[disabled] {
 
 @media (max-width:768px) {
 	.news-right__wrapper {
-		padding-top: 0
+		padding-top: 0;
+		padding-bottom: 100px !important;
 	}
 }
 
@@ -15734,7 +15755,12 @@ input[type=submit].styler[disabled] {
 .news-right__more {
 	font-size: 14px;
 	margin-top: 3rem;
-	display: inline-block
+	display: inline-block;
+
+	@include sm() {
+		margin-top: 0;
+	}
+
 }
 
 .text-carousel {
@@ -16003,7 +16029,7 @@ input[type=submit].styler[disabled] {
 @media (max-width:768px) {
 	.services-yellow__wrapper {
 		padding: 40px 20px 2rem;
-		margin-bottom: 10rem
+		margin-bottom: 60px;
 	}
 }
 
@@ -16243,6 +16269,11 @@ input[type=submit].styler[disabled] {
 
 .people {
 	margin-bottom: 200px !important;
+
+	@include sm() {
+		margin-bottom: 100px !important;
+	}
+
 }
 
 @media (max-width:1024px) {
@@ -16521,7 +16552,7 @@ input[type=submit].styler[disabled] {
 
 @media (max-width:1024px) {
 	.ceo-top {
-		margin-bottom: 10rem
+		margin-bottom: 0;
 	}
 }
 
@@ -16676,7 +16707,8 @@ input[type=submit].styler[disabled] {
 
 @media (max-width:768px) {
 	.vacancy-page__wrapper {
-		padding: 45px 20px 0 0
+		padding: 45px 20px 0 0;
+		margin-bottom: 20px;
 	}
 }
 
@@ -17228,7 +17260,8 @@ input[type=submit].styler[disabled] {
 
 @media (max-width:768px) {
 	.company-clients__wrapper {
-		padding-left: 20px
+		padding-left: 20px;
+		padding-bottom: 0;
 	}
 }
 
@@ -17714,7 +17747,7 @@ span.select2-selection.select2-selection--single {
 		padding-left: 70px;
 		padding-top: 90px;
 		padding-right: 49px;
-		padding-bottom: 130px;
+		padding-bottom: 100px !important;
 	}
 
 	&__vertical-text {
@@ -18145,6 +18178,7 @@ span.select2-selection.select2-selection--single {
 	@include sm() {
 		padding-left: 20px;
 		padding-right: 20px;
+		margin-bottom: 50px;
 	}
 
 	&__item {
