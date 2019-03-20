@@ -18356,7 +18356,7 @@ textarea {
 		line-height: normal;
 		padding: 0;
 		text-align: right;
-		margin-top: 22px;
+		margin-top: 17px;
 
 		@include sm() {
 			margin-top: 0;
@@ -18368,4 +18368,20 @@ textarea {
 
 .page-header.sticky {
 	background-color: #fff !important;
+}
+
+.services-top{
+
+	@include sm() {
+		margin-bottom: 60px;
+	}
+
+}
+
+.services-top__wrapper{
+
+	@include sm() {
+		padding-bottom: 60px;
+	}
+
 }

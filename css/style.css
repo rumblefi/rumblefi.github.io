@@ -18330,7 +18330,7 @@ textarea {
   line-height: normal;
   padding: 0;
   text-align: right;
-  margin-top: 22px;
+  margin-top: 17px;
 }
 
 @media (max-width: 768px) {
@@ -18341,5 +18341,17 @@ textarea {
 
 .page-header.sticky {
   background-color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .services-top {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-top__wrapper {
+    padding-bottom: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
