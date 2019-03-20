@@ -4497,10 +4497,6 @@ input[type=submit].styler[disabled] {
 	position: fixed
 }
 
-.page-header.sticky {
-	background-color: #fff
-}
-
 @media (max-width:768px) {
 	.page-header {
 		display: -webkit-box;
@@ -10362,11 +10358,11 @@ input[type=submit].styler[disabled] {
 	height: 16px;
 	opacity: 0;
 
-	&:focus{
+	&:focus {
 		outline: 0;
 	}
 
-	&.is-shown{
+	&.is-shown {
 		opacity: 1;
 	}
 
@@ -11135,7 +11131,7 @@ input[type=submit].styler[disabled] {
 	line-height: 1.12;
 	margin-bottom: 45px;
 
-	&:last-child{
+	&:last-child {
 		margin-bottom: 0;
 	}
 
@@ -11415,7 +11411,7 @@ input[type=submit].styler[disabled] {
 
 .main-page .news-announces__wrapper {
 	padding: 4rem 0 13rem 2.2rem;
-	padding-bottom: 0;		
+	padding-bottom: 0;
 }
 
 @media (max-width:1024px) {
@@ -13154,7 +13150,7 @@ input[type=submit].styler[disabled] {
 .yellow-block__block {
 	margin-bottom: 4.2rem;
 
-	&:last-child{
+	&:last-child {
 		margin-bottom: 0;
 	}
 
@@ -16329,7 +16325,7 @@ input[type=submit].styler[disabled] {
 }
 
 .people-sale__item:nth-child(3) {
-	
+
 	@include sm() {
 		grid-column: 2;
 		transform: translateY(-55px);
@@ -18319,19 +18315,19 @@ textarea {
 
 }
 
-.people-list--four{
+.people-list--four {
 	margin-bottom: 0;
 }
 
-.vacancy-page__item{
+.vacancy-page__item {
 
-	&:last-child{
+	&:last-child {
 		margin-bottom: 0;
 	}
 
 }
 
-.checkbox-form__tooltip{
+.checkbox-form__tooltip {
 	right: auto;
 	left: 0;
 	right: 0;
@@ -18349,11 +18345,11 @@ textarea {
 
 }
 
-.input-form__file-wrapper{
+.input-form__file-wrapper {
 	position: relative;
 	width: 100%;
 
-	.form__tooltip{
+	.form__tooltip {
 		width: 100%;
 		right: 0;
 		top: 100%;
@@ -18368,4 +18364,8 @@ textarea {
 
 	}
 
-}	
+}
+
+.page-header.sticky {
+	background-color: #fff !important;
+}

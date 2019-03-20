@@ -4474,10 +4474,6 @@ input[type=submit].styler[disabled] {
   position: fixed;
 }
 
-.page-header.sticky {
-  background-color: #fff;
-}
-
 @media (max-width: 768px) {
   .page-header {
     display: -webkit-box;
@@ -18341,5 +18337,9 @@ textarea {
   .input-form__file-wrapper .form__tooltip {
     margin-top: 0;
   }
+}
+
+.page-header.sticky {
+  background-color: #fff !important;
 }
 /*# sourceMappingURL=style.css.map */
