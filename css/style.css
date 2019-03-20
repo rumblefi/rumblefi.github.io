@@ -2237,7 +2237,7 @@ input[type=submit].styler[disabled] {
   justify-content: space-between;
   width: 90%;
   padding-top: 18px;
-  margin-bottom: 44px;
+  margin-bottom: 65px;
 }
 
 @media (max-width: 768px) {
@@ -3995,7 +3995,7 @@ input[type=submit].styler[disabled] {
 
 @media (max-width: 768px) {
   .checkbox-form {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     padding-left: 56px;
   }
 }
@@ -14574,7 +14574,7 @@ input[type=submit].styler[disabled] {
 
 @media (max-width: 768px) {
   .error-page__content {
-    padding: 100px 20px 50px;
+    padding: 190px 20px 50px;
     font-size: 18px;
   }
 }
@@ -16494,6 +16494,7 @@ input[type=submit].styler[disabled] {
   font-size: 21px;
   line-height: 1.38;
   padding-right: 12%;
+  padding-bottom: 0 !important;
 }
 
 @media (max-width: 1024px) {
@@ -18300,5 +18301,45 @@ textarea {
 
 .vacancy-page__item:last-child {
   margin-bottom: 0;
+}
+
+.checkbox-form__tooltip {
+  right: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: left;
+  top: 100%;
+  margin-top: 10px;
+  line-height: normal;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .checkbox-form__tooltip {
+    left: 25px;
+    margin-top: 5px;
+  }
+}
+
+.input-form__file-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-form__file-wrapper .form__tooltip {
+  width: 100%;
+  right: 0;
+  top: 100%;
+  line-height: normal;
+  padding: 0;
+  text-align: right;
+  margin-top: 22px;
+}
+
+@media (max-width: 768px) {
+  .input-form__file-wrapper .form__tooltip {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -414,31 +414,34 @@
             <div class="form__item input-form">
               <input class="input-form__input" type="text" name="phone" id="phone">
               <label class="input-form__label" for="phone">Телефон</label>
-              <div class="form__tooltip form__tooltip--empty">поле не заполнено</div>
+              <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
             </div>
             <div class="form__item input-form">
               <input class="input-form__input" type="text" name="name" id="name">
               <label class="input-form__label" for="name">Имя</label>
-              <div class="form__tooltip form__tooltip--empty">поле не заполнено</div>
+              <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
             </div>
             <div class="form__item input-form">
               <input class="input-form__input" type="text" name="email" id="email">
               <label class="input-form__label" for="email">e-mail *</label>
-              <div class="form__tooltip form__tooltip--empty">поле не заполнено</div>
+              <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
             </div>
             <div class="form__item textarea-form">
               <textarea class="textarea-form__textarea" name="message" id="message"></textarea>
               <label class="textarea-form__label" for="message">Сообщение *</label>
-              <div class="form__tooltip form__tooltip--empty">поле не заполнено</div>
+              <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
             </div>
             <div class="form__bottom">
               <div class="form__item checkbox-form">
                 <input class="checkbox-form__input" type="checkbox" name="accept" id="accept">
                 <label class="checkbox-form__label" for="accept">Согласие на обработку персональных данных в
                   соответствии с <a class='checkbox-form__link' href='#'>Пользовательским соглашением</a> </label>
-                <div class="form__tooltip form__tooltip--empty">поле не заполнено</div>
+                <div class="form__tooltip form__tooltip--empty checkbox-form__tooltip" style="display: block;">подтвердите согласие, пожалуйста</div>
               </div>
-              <input class="input-form__file" type="file">
+              <div class="input-form__file-wrapper">
+                <input class="input-form__file" type="file">
+                <div class="form__tooltip form__tooltip--empty" style="display: block;">некорректный тип файла</div>
+              </div>
             </div>
             <button class="form__submit" type="submit">Отправить</button>
           </form>

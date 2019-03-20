@@ -253,28 +253,7 @@ $(function () {
 		}
 	}), $("#form").on("submit", function () {
 		event.preventDefault()
-	}), $(".form").each(function () {
-		$(this).validate({
-			rules: {
-				name: "required",
-				message: "required",
-				email: {
-					required: !0,
-					email: !0
-				},
-				accept: "required"
-			},
-			messages: {
-				name: "поле не заполнено",
-				message: "поле не заполнено",
-				email: {
-					required: "поле не заполнено",
-					email: "введите корректный email"
-				},
-				accept: "нужно ваше согласие"
-			}
-		})
-	}), $(".input-form__input").on("focus", function () {
+	}),$(".input-form__input").on("focus", function () {
 		$(this).siblings(".input-form__label").addClass("is-active")
 	}).on("blur", function () {
 		0 === $(this).val().length && $(this).siblings(".input-form__label").removeClass("is-active")
