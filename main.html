@@ -71,10 +71,10 @@
                 <svg width="20" height="20">
                   <use xlink:href="img/svg.svg#search-sm"></use>
                 </svg>
-              </button><a class="page-header__mail" href="mailto:test@mail.ru">
+              </button><div class="page-header__mail js-modal-trigger" data-target="popupSendMessage" >
                 <svg width="22" height="16">
                   <use xlink:href="img/svg.svg#mail-sm"> </use>
-                </svg></a>
+                </svg></div>
             </div>
             <button class="nav-trigger js-nav-trigger" type="button"><span class="visually-hidden">Меню</span><span
                 class="stripe"></span></button>
@@ -347,6 +347,7 @@
         </div>
       </div>
     </footer>
+    
     <div class="modal-overlay js-modal" id="popupSearch">
       <div class="modal _search modal--line">
         <button class="modal__close js-close" data-target="popupSearch" type="button"></button>
@@ -480,7 +481,6 @@
     </section>
 
   </div>
-
 
 
   <div class="copy-tooltip-overlay">

@@ -18434,4 +18434,8 @@ textarea {
     padding-bottom: 100px;
   }
 }
+
+.js-modal-trigger {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
