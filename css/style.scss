@@ -430,9 +430,9 @@ h3,
 .article li {
 	position: relative;
 	padding-left: 40px;
-	margin-bottom: 20px;
+	margin: 0;
 	font-size: 18px;
-	line-height: 1.56
+	line-height: 1.56;
 }
 
 .article li:before {
