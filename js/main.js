@@ -441,26 +441,35 @@ $(function () {
 			var id = cur && cur.length ? $(cur[0]).attr('data-letter') : "";
 			var last = $(scrollItems[scrollItems.length - 1][0]).attr('data-letter')
 
-			if (lastId !== id) {
-				lastId = id;
-				
-				var docHeight = $(document).height();
-				var winScrolled = $(window).height() + $(window).scrollTop(); // Sum never quite reaches
-				if ((docHeight - winScrolled) < 1) {
-					console.log('yes')
-					menuItems.filter("[data-letter=" + last + "]").addClass("is-active").siblings().removeClass('is-active');
-				}
-
-				else{
-					menuItems.filter("[data-letter=" + id + "]").addClass("is-active").siblings().removeClass('is-active');
-				}
-
+			var docHeight = $(document).height();
+			var winScrolled = $(window).height() + $(window).scrollTop(); // Sum never quite reaches
+			if ( (docHeight - winScrolled) < 1 ) {
+				menuItems.filter("[data-letter=" + last + "]").addClass("is-active").siblings().removeClass('is-active');
 			}
+			else{
+				menuItems.filter("[data-letter=" + id + "]").addClass("is-active").siblings().removeClass('is-active');
+			}
+			// if (lastId !== id) {
+			// 	lastId = id;
+
+			// 	// menuItems.filter("[data-letter=" + id + "]").addClass("is-active").siblings().removeClass('is-active');
+
+
+			// }
 		});
 
 	}
 
 	test()
+
+	// $(window).on("scroll", function () {
+	// 	var docHeight = $(document).height();
+	// 	var winScrolled = $(window).height() + $(window).scrollTop(); // Sum never quite reaches
+	// 	if ((docHeight - winScrolled) < 1) {
+	// 		console.log('hj')
+	// 		// console.log("event " + "module scrolled to bottom" + " @Model.documentFilename @Model.requestorId");
+	// 	}
+	// });
 
 
 });
