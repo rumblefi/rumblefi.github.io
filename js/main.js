@@ -268,26 +268,6 @@ $(function () {
 
 $(function () {
 
-	// $('.glossary-letters__item').on('click', function () {
-
-	// 	var letterAttr = $(this).attr('data-letter');
-	// 	var target = $('.glossary-group__letter[data-letter="' + letterAttr + '"]')
-
-	// 	if (target) {
-
-	// 		var targetOffset = $(target).offset().top;
-	// 		var headerHeight = $(".page-header").outerHeight()
-	// 		var targetScrollTop = targetOffset - headerHeight;
-
-	// 		$('html, body').animate({
-	// 			scrollTop: targetScrollTop
-	// 		}, 500);
-	// 		$(this).addClass('is-active').siblings().removeClass('is-active');
-
-	// 	}
-
-	// });
-
 	function reponsiveHeightEl(target, prop, ratio) {
 		var onePercentHeight = $(window).height() / 100;
 		var resVal = ratio / $(window).height() * 100;
@@ -392,84 +372,68 @@ $(function () {
 	});
 
 
-	function getDocHeight() {
-		var D = document;
-		return Math.max(
-			D.body.scrollHeight, D.documentElement.scrollHeight,
-			D.body.offsetHeight, D.documentElement.offsetHeight,
-			D.body.clientHeight, D.documentElement.clientHeight
-		);
+
+	const hightlightAsideLetter = (attrName) => {
+		return $(".glossary-letters__item").filter(`[data-letter=${attrName}]`).addClass("is-active").siblings().removeClass('is-active');
 	}
 
+	hightlightAsideLetter( $('.glossary-group__letter').first().attr('data-letter') )
 
-	function test() {
-		// Cache selectors
-		var lastId,
-			topMenu = $(".page-header"),
-			topMenuHeight = topMenu.outerHeight() + 1,
-			// All list items
-			menuItems = $(".glossary-letters").find(".glossary-letters__item"),
-			// Anchors corresponding to menu items
-			scrollItems = menuItems.map(function () {
-				var item = $('.glossary-group__letter[data-letter="' + $(this).attr("data-letter") + '"]');
-				if (item.length) {
-					return item;
-				}
-			});
+	function highlightAsideLetters() {
 
-		menuItems.click(function (e) {
-			var href = $(this).attr("data-letter"),
-				offsetTop = $('.glossary-group__letter[data-letter="' + href + '"]').offset().top - topMenuHeight + 1;
+		const header = $(".page-header");
+		const headerHeight = header.outerHeight() + 1;
+		const lettersListItems = $(".glossary-letters__item");
+		const scrollItemsSelector = ".glossary-group__letter";
+		const attrName = 'data-letter';
+		
+		const scrollItems = lettersListItems.map(function () {
+			const attrVal = $(this).attr(`${attrName}`);
+			const item = $(`${scrollItemsSelector}[${attrName}="${attrVal}"]`);
+			if (item.length) {
+				return item;
+			}
+		});
+
+		lettersListItems.on('click', function () {
+			const attrVal = $(this).attr(`${attrName}`);
+			const offsetTop = $(`${scrollItemsSelector}[${attrName}=${attrVal}]`).offset().top - headerHeight + 1;
 			$('html, body').stop().animate({
 				scrollTop: offsetTop
 			}, 500);
-			e.preventDefault();
 		});
 
-		// Bind to scroll
-		$(window).scroll(function () {
-			// Get container scroll position
-			var fromTop = $(this).scrollTop() + topMenuHeight;
+		$(window).on('scroll', function () {
 
-			// Get id of current scroll item
-			var cur = scrollItems.map(function () {
-				if ($(this).offset().top < fromTop)
+			const scrollTop = $(this).scrollTop();
+			const fromTop = scrollTop + headerHeight;
+			const docHeight = $(document).height();
+			const winScrolled = $(window).height() + scrollTop; // Sum never quite reaches
+
+			let cur = scrollItems.map(function () {
+				if ($(this).offset().top < fromTop) {
 					return $(this);
+				}
 			});
-			// Get the id of the current element
+
 			cur = cur[cur.length - 1];
-			var id = cur && cur.length ? $(cur[0]).attr('data-letter') : "";
-			var last = $(scrollItems[scrollItems.length - 1][0]).attr('data-letter')
+			const dataLetter = cur && cur.length ? $(cur[0]).attr(`${attrName}`) : "";
+			const last = $(scrollItems[scrollItems.length - 1][0]).attr(`${attrName}`)
 
-			var docHeight = $(document).height();
-			var winScrolled = $(window).height() + $(window).scrollTop(); // Sum never quite reaches
-			if ( (docHeight - winScrolled) < 1 ) {
-				menuItems.filter("[data-letter=" + last + "]").addClass("is-active").siblings().removeClass('is-active');
+			if (dataLetter !== "") {
+
+				if ((docHeight - winScrolled) < 1) {
+					hightlightAsideLetter(last)
+				} else {
+					hightlightAsideLetter(dataLetter)
+				}
 			}
-			else{
-				menuItems.filter("[data-letter=" + id + "]").addClass("is-active").siblings().removeClass('is-active');
-			}
-			// if (lastId !== id) {
-			// 	lastId = id;
 
-			// 	// menuItems.filter("[data-letter=" + id + "]").addClass("is-active").siblings().removeClass('is-active');
-
-
-			// }
 		});
 
 	}
 
-	test()
-
-	// $(window).on("scroll", function () {
-	// 	var docHeight = $(document).height();
-	// 	var winScrolled = $(window).height() + $(window).scrollTop(); // Sum never quite reaches
-	// 	if ((docHeight - winScrolled) < 1) {
-	// 		console.log('hj')
-	// 		// console.log("event " + "module scrolled to bottom" + " @Model.documentFilename @Model.requestorId");
-	// 	}
-	// });
+	highlightAsideLetters()
 
 
 });
