@@ -12561,7 +12561,7 @@ input[type=submit].styler[disabled] {
 
 @media (max-width: 768px) {
   .white-block {
-    padding-top: 14.992503748125937vh;
+    padding-top: 70px;
     padding-bottom: 10.494752623688155vh;
   }
 }
@@ -18487,7 +18487,21 @@ textarea {
   cursor: pointer;
 }
 
-.page-header {
-  border-bottom: 1px solid #000;
+.white-block__vertical-text {
+  font-size: 26px;
+  color: #000;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: left;
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 100px;
+}
+
+.white-block__title-wrapper {
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */
