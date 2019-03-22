@@ -18504,4 +18504,13 @@ textarea {
 .white-block__title-wrapper {
   position: relative;
 }
+
+#popupSearch .right-panel {
+  position: absolute !important;
+  z-index: 0;
+}
+
+#popupSearch .right-panel__mail {
+  display: none !important;
+}
 /*# sourceMappingURL=style.css.map */
