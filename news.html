@@ -2,382 +2,846 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="format-detection" content="telephone=no">
-  <title>AFR</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link rel="shortcut icon" href="img/favicon.ico.jpeg">
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title></title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
 </head>
 
-<body class="overflow">
-  <div class="preloader" id="preloader">
+<body>
 
-    <div class="sk-double-bounce">
+	<div id="preloader">
 
-      <div class="sk-child sk-double-bounce-1"></div>
+		<div class="sk-folding-cube">
 
-      <div class="sk-child sk-double-bounce-2"></div>
+			<div class="sk-cube sk-cube-1"></div>
 
-    </div>
+			<div class="sk-cube sk-cube-2"></div>
 
-  </div>
-  <div class="global-wrapper">
-    <header class="page-header js-header light">
-      <div class="page-header__main">
-        <div class="page-header__main-wrapper">
-          <div class="page-header__inner"><a class="page-header__logo logo" href="main.html"><span class="visually-hidden">AFR</span>
-              <svg>
-                <use xlink:href="img/svg.svg#logo"></use>
-              </svg></a>
-            <div class="page-header__mobile">
-              <button class="page-header__search js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
-                <svg width="20" height="20">
-                  <use xlink:href="img/svg.svg#search-sm"></use>
-                </svg>
-              </button><div class="page-header__mail js-modal-trigger" data-target="popupSendMessage" >
-                <svg width="22" height="16">
-                  <use xlink:href="img/svg.svg#mail-sm"> </use>
-                </svg></div>
-            </div>
-            <button class="nav-trigger js-nav-trigger" type="button"><span class="visually-hidden">Меню</span><span
-                class="stripe"></span></button>
-          </div>
-          <nav class="main-navigation">
-            <ul class="main-navigation__list navigation-list">
-              <li class="navigation-list__item expandable js-subnav-trigger"><a class="navigation-list__link" href="company.html">Компания</a>
-                <ul class="subnavigation">
-                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Команда</a></li>
-                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Соискателям</a></li>
-                </ul>
-              </li>
-              <li class="navigation-list__item expandable js-subnav-trigger"><a class="navigation-list__link" href="services.html">Услуги</a>
-                <ul class="subnavigation">
-                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Проекты «под ключ»</a></li>
-                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Поставка оборудования</a></li>
-                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Работы и услуги</a></li>
-                </ul>
-              </li>
-              <li class="navigation-list__item current"><a class="navigation-list__link" href="press.html">Пресс-центр</a>
-              </li>
-              <li class="navigation-list__item"><a class="navigation-list__link" href="contacts.html">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <div class="right-panel">
-      <form class="right-panel__item right-panel__lang lang-block" action="#" method="post">
-        <input type="hidden" name="language" value="ru">
-        <input type="hidden" name="language" value="en">
-        <button class="lang-block__link">eng</button>
-      </form><div class="right-panel__item right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
-        <svg width="30" height="22">
-          <use xlink:href="img/svg.svg#mail-sm"></use>
-        </svg></div>
-      <div class="right-panel__item right-panel__search">
-        <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
-          <svg width="28" height="28">
-            <use xlink:href="img/svg.svg#search-sm"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div class="news__wrapper">
-      <div class="news-left">
-        <div class="news-left__aside"><a class="news-left__link" href="#">пресскит</a>
-          <div class="news__vertical">Пресс-центр</div>
-          <!-- <div class="news-left__vertical vertical-text">Пресс-центр</div> -->
-        </div>
-        <div class="owl-carousel news-carousel">
-          <div class="news-carousel__item"><a class="news-card" href="#">
-              <div class="news-card__bg news-carousel__bg"><img src="img/new/news.jpg" alt=""></div>
-              <div class="news-card__content news-carousel__content">
-                <div class="news-card__rubric">публикации</div>
-                <h3 class="news-card__headline news-carousel__headline">Узнайте о новых мембранных технологиях,
-                  приложениях и решениях на форуме мембранной технологии 2018 года</h3>
-                <p class="news-card__bottom"><span class="news-card__date">12.09.18</span><span class="news-card__tag">производство</span></p>
-              </div>
-            </a></div>
-          <div class="news-carousel__item"><a class="news-card" href="#">
-              <div class="news-card__bg news-carousel__bg"><img src="img/new/news.jpg" alt=""></div>
-              <div class="news-card__content news-carousel__content">
-                <div class="news-card__rubric">публикации</div>
-                <h3 class="news-card__headline news-carousel__headline">Узнайте о новых мембранных технологиях,
-                  приложениях и решениях на форуме мембранной технологии 2018 года</h3>
-                <p class="news-card__bottom"><span class="news-card__date">12.09.18</span><span class="news-card__tag">производство</span></p>
-              </div>
-            </a></div>
-        </div>
-      </div>
-      <div class="news-right">
-        <div class="wrapper-calc news-right__wrapper">
-          <div class="owl-carousel text-carousel"><a class="text-carousel__item" href="#">
-              <div class="text-carousel__date">12-14<span class="text-carousel__date--small">сентября</span></div>
-              <div class="text-carousel__title">Форум мембранной технологии 2018 года</div>
-            </a><a class="text-carousel__item" href="#">
-              <div class="text-carousel__date">14-15<span class="text-carousel__date--small">сентября</span></div>
-              <div class="text-carousel__title">Форум мембранной технологии 2018 года </div>
-            </a></div>
-          <div class="news-right__block">
-            <div class="news-announces__list">
-              <div class="news-announces__item"><a class="news-announces__content news-card" href="#">
-                  <div class="news-card__bg"> <img src="img/new/new0.jpg" alt=""></div>
-                  <div class="news-card__content">
-                    <div class="news-card__rubric">новости</div>
-                    <h3 class="news-card__headline">Технология помогает переработчикам производить натуральные продукты
-                      и напитки</h3>
-                    <p class="news-card__bottom"><span class="news-card__date">12.09.18</span><span class="news-card__tag">производство</span></p>
-                  </div>
-                </a></div>
-              <div class="news-announces__item"><a class="news-announces__content news-card" href="#">
-                  <div class="news-card__bg"> <img src="img/new/new4.jpg" alt=""></div>
-                  <div class="news-card__content">
-                    <div class="news-card__rubric">публикации</div>
-                    <h3 class="news-card__headline">Как оценить и уточнить пищевые смазочные материалы</h3>
-                    <p class="news-card__bottom"><span class="news-card__date">12.09.18</span><span class="news-card__tag">производство</span></p>
-                  </div>
-                </a></div>
-              <div class="news-announces__item"><a class="news-announces__content news-card" href="#">
-                  <div class="news-card__bg"> <img src="img/new/new5.jpg" alt=""></div>
-                  <div class="news-card__content">
-                    <div class="news-card__rubric">публикации</div>
-                    <h3 class="news-card__headline">Технологии на защите окружающей среды</h3>
-                    <p class="news-card__bottom"><span class="news-card__date">12.09.18</span><span class="news-card__tag">производство</span></p>
-                  </div>
-                </a></div>
-              <div class="news-announces__item"><a class="news-announces__content news-card" href="#">
-                  <div class="news-card__bg"> <img src="img/new/new1.jpg" alt=""></div>
-                  <div class="news-card__content">
-                    <div class="news-card__rubric">новости</div>
-                    <h3 class="news-card__headline">Технология помогает переработчикам производить натуральные продукты
-                      и напитки</h3>
-                    <p class="news-card__bottom"><span class="news-card__date">12.09.18</span><span class="news-card__tag">производство</span></p>
-                  </div>
-                </a></div>
-              <div class="news-announces__item"><a class="news-announces__content news-card" href="#">
-                  <div class="news-card__bg"> <img src="img/new/new2.jpg" alt=""></div>
-                  <div class="news-card__content">
-                    <div class="news-card__rubric">публикации</div>
-                    <h3 class="news-card__headline">Как оценить и уточнить пищевые смазочные материалы</h3>
-                    <p class="news-card__bottom"><span class="news-card__date">12.09.18</span><span class="news-card__tag">производство</span></p>
-                  </div>
-                </a></div>
-              <div class="news-announces__item"><a class="news-announces__content news-card" href="#">
-                  <div class="news-card__bg"> <img src="img/new/new3.jpg" alt=""></div>
-                  <div class="news-card__content">
-                    <div class="news-card__rubric">публикации</div>
-                    <h3 class="news-card__headline">Технологии на защите окружающей среды</h3>
-                    <p class="news-card__bottom"><span class="news-card__date">12.09.18</span><span class="news-card__tag">производство</span></p>
-                  </div>
-                </a></div>
-            </div><a class="news-announces__btn js-btn-more news-right__more" href="#">показать еще </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="page-footer">
-      <div class="page-footer__main">
-        <div class="page-footer__wrapper wrapper-calc">
-          <div class="page-footer__contacts">
-            <div class="page-footer__copyright">Copyright ©2019. AFR</div>
-            <div class="page-footer__phones"><a class="page-footer__mail" href="mailto:sales@afr.com.ru">sales@afr.com.ru,</a><a
-                class="page-footer__tel" href="tel:+7(812)331-20-27">+7 (812) 331-20-27,</a><a class="page-footer__tel"
-                href="tel:+7(812)331-20-28">+7 (812) 331-20-28</a></div>
-            <div class="page-footer__links"><a href="#">Обратная связь</a><a href="#">Глоссарий</a></div>
-            <div class="page-footer__create"><span>разработка</span><a href="http://greenlabs.ru/" target="_blank">
-                <svg>
-                  <use xlink:href="img/svg.svg#greenlabs"> </use>
-                </svg></a></div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
+			<div class="sk-cube sk-cube-4"></div>
 
+			<div class="sk-cube sk-cube-3"></div>
 
-    <div class="modal-overlay js-modal" id="popupSearch">
-        <div class="modal _search modal--line">
-          <button class="modal__close js-close" data-target="popupSearch" type="button"></button>
-          <div class="modal__inner">
-            <div class="right-panel modal__right-panel"><div class="right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
-                <svg width="30" height="22">
-                  <use xlink:href="img/svg.svg#mail-sm"></use>
-                </svg></div></div>
-            <form class="modal-form" action="#" method="post">
-              <div class="modal-form__field-wrapper"><div class="modal-form__mail js-modal-trigger" data-target="popupSendMessage" >
-                  <svg width="30" height="22">
-                    <use xlink:href="img/svg.svg#mail-sm"></use>
-                  </svg></div>
-                <label class="modal-form__label" for="search-field"><span class="visually-hidden">Поиск</span>
-                  <svg width="28" height="28">
-                    <use xlink:href="img/svg.svg#search-sm"></use>
-                  </svg>
-                </label>
-                <input class="modal-form__field" type="text" id="search-field">
-                <button class="modal-form__clear js-clear" type="button"><span class="visually-hidden">очистить </span>
-                  <svg width="16" height="16">
-                    <use xlink:href="img/svg.svg#clear"></use>
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <section class="popup js-modal" id="popupSendMessage">
-        <h1 class="visually-hidden">Обратная связь</h1>
-        <button class="popup__btn-close js-close" data-target="popupSendMessage" type="button"><span class="visually-hidden">Закрыть</span>
-          <svg width="25" height="25">
-            <use xlink:href="img/svg.svg#close"></use>
-          </svg>
-        </button>
-        <div class="popup__inner">
-          <div class="send-message">
-            <div class="right-panel send-message__right-panel"><div class="right-panel__mail" data-target="popupSendMessage" >
-                <svg width="30" height="22">
-                  <use xlink:href="img/svg.svg#mail-sm"></use>
-                </svg></div>
-              <div class="right-panel__search">
-                <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
-                  <svg width="28" height="28">
-                    <use xlink:href="img/svg.svg#search-sm"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <form class="form popup__form vacancy-test__form send-message__form" id="form" action="#" method="post">
-              <div class="send-message__title">Обратная связь</div>
-              <div class="send-message__text">
-                <p>Здесь вы можете отправить нам запрос, уточнить информацию или просто познакомиться. Мы с удовольствием
-                  вам ответим.</p>
-              </div>
-              <div class="form__item select-form">
-                <select class="js-select select-form__group" name="theme" id="theme">
-                  <option class="select-form__option" value="">Тема</option>
-                  <option class="select-form__option" value="theme-1">Тема 1</option>
-                  <option class="select-form__option" value="theme-2">Тема 2</option>
-                  <option class="select-form__option" value="theme-3">Тема 3</option>
-                </select>
-              </div>
-              <div class="form__item input-form">
-                <input class="input-form__input" type="text" name="phone" id="phone">
-                <label class="input-form__label" for="phone">Телефон</label>
-              </div>
-              <div class="form__item input-form">
-                <input class="input-form__input" type="text" name="name" id="name">
-                <label class="input-form__label" for="name">Имя</label>
-                <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
-              </div>
-              <div class="form__item input-form">
-                <input class="input-form__input" type="text" name="email" id="email">
-                <label class="input-form__label" for="email">e-mail *</label>
-                <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
-              </div>
-              <div class="form__item textarea-form">
-                <textarea class="textarea-form__textarea" name="message" id="message"></textarea>
-                <label class="textarea-form__label" for="message">Сообщение *</label>
-                <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
-              </div>
-              <div class="form__bottom">
-                <div class="form__item checkbox-form">
-                  <input class="checkbox-form__input" type="checkbox" name="accept" id="accept">
-                  <label class="checkbox-form__label" for="accept">Согласие на обработку персональных данных в
-                    соответствии с <a class='checkbox-form__link' href='#'>Пользовательским соглашением</a> </label>
-                  <div class="form__tooltip form__tooltip--empty checkbox-form__tooltip" style="display: block;">подтвердите согласие, пожалуйста</div>
-                </div>
-                <div class="input-form__file-wrapper">
-                  <input class="input-form__file" type="file">
-                  <div class="form__tooltip form__tooltip--empty" style="display: block;">некорректный тип файла</div>
-                </div>
-              </div>
-              <button class="form__submit" type="submit">Отправить</button>
-            </form>
-          </div>
-        </div>
-      </section>
-  
-      <section class="popup js-modal" id="popupSendMessageSuccess">
-        <h1 class="visually-hidden">Мы получили ваше сообщение и уже работаем с ним. Спасибо!</h1>
-        <button class="popup__btn-close js-close" data-target="popupSendMessage" type="button"><span class="visually-hidden">Закрыть</span>
-          <svg width="25" height="25">
-            <use xlink:href="img/svg.svg#close"></use>
-          </svg>
-        </button>
-        <div class="popup__inner">
-          <div class="send-message">
-            <div class="right-panel send-message__right-panel"><div class="right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
-                <svg width="30" height="22">
-                  <use xlink:href="img/svg.svg#mail-sm"></use>
-                </svg></div>
-              <div class="right-panel__search">
-                <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
-                  <svg width="28" height="28">
-                    <use xlink:href="img/svg.svg#search-sm"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="popup__form vacancy-test__form send-message__form">
-              <div class="send-message__text">
-                <p>Мы получили ваше сообщение и уже работаем с ним.</p>
-                <p>Спасибо!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+		</div>
+
+	</div>
+
+	<div class="page-inner">
+
+		<div class="page-content">
+
+			<header class="header">
+
+				<div class="container header__container">
+
+					<a href="index.html" class="header__logo">
+
+						<svg width="109" height="23" viewBox="0 0 109 23" fill="none" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<rect x="0.00012207" width="109" height="23" fill="url(#pattern0)" />
+							<defs>
+								<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+									<use xlink:href="#image0"
+										transform="translate(0 -0.00434783) scale(0.00183486 0.00869565)" />
+								</pattern>
+								<image id="image0" width="545" height="116"
+									xlink:href="data:image/png;base64,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" />
+							</defs>
+						</svg>
+
+					</a>
+
+					<nav class="header-nav">
+
+						<ul class="header-list">
+
+							<li class="header-list__item">
+
+								<a href="index.html" class="header-list__link">Ana səhifə</a>
+
+							</li>
+
+							<li class="header-list__item">
+
+								<a href="javascript:void(0)" class="header-list__link">İstiqamətlərimiz</a>
+
+								<ul class="header-subnav">
+
+									<li class="header-subnav__item">
+
+										<a href="javascript:void(0)" class="header-subnav__link">Proqram təminatı və
+											idarə olunması</a>
+
+										<ul class="header-subnav">
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Ticarət və
+													anbar</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Restoran
+													Horeca</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Biznes
+													prosseslərin idarə olunması</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Anbar logistika
+													sistemi</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)"
+													class="header-subnav__link">Biznes-təhlil</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Elektron
+													sənədlər xorders</a>
+
+											</li>
+
+										</ul>
+
+									</li>
+
+									<li class="header-subnav__item">
+
+										<a href="javascript:void(0)" class="header-subnav__link">İT xidmətlər</a>
+
+										<ul class="header-subnav">
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Video müşahidə
+													sistemlərinin
+													quraşdırılması</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Telefon və
+													internet sisteminin
+													quraşdırılması</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Giriş - çıxış
+													sistemlərinin
+													quraşdırılması</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">İstifadəçi
+													kompüterləri və periferiya
+													qurğularına texniki xidmət</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Şəbəkə
+													avadanlıqları və telefoniya
+													sistemləri
+													üzrə texniki xidmət</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Proqram
+													təminatı üzrə texniki xidmət</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Server
+													avadanlıqlarına texniki xidmət</a>
+
+											</li>
+
+										</ul>
+
+									</li>
+
+									<li class="header-subnav__item">
+
+										<a href="javascript:void(0)" class="header-subnav__link">Avadanlıqlar</a>
+
+										<ul class="header-subnav">
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Kompüterlər və
+													notebooklar</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Barcode
+													skanerlər</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Barcode
+													printerlər</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Çek
+													printerlər</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Tərəzilər</a>
+
+											</li>
+
+											<li class="header-subnav__item">
+
+												<a href="javascript:void(0)" class="header-subnav__link">Əl terminal</a>
+
+											</li>
+
+										</ul>
+
+									</li>
+
+								</ul>
+
+							</li>
+
+							<li class="header-list__item">
+
+								<a href="erp.html" class="header-list__link">ERP</a>
+
+							</li>
+
+							<li class="header-list__item">
+
+								<a href="about.html" class="header-list__link">Haqqımızda</a>
+
+							</li>
+
+							<li class="header-list__item active">
+
+								<a href="news.html" class="header-list__link">Xəbərlər</a>
+
+							</li>
+
+						</ul>
+
+						<a href="tel:+994552969939" class="header-phone">
+
+							<svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M13.9692 10.0726C13.9325 9.96181 13.6985 9.7986 13.2676 9.58335C13.1508 9.51551 12.9845 9.42331 12.7692 9.30634C12.5538 9.18937 12.3583 9.08159 12.1829 8.98309C12.0073 8.88462 11.8427 8.78922 11.6889 8.69702C11.6644 8.67856 11.5874 8.62478 11.4582 8.53533C11.3288 8.44614 11.2197 8.37994 11.1303 8.33677C11.041 8.29386 10.9533 8.27226 10.8671 8.27226C10.744 8.27226 10.5903 8.36002 10.4057 8.53533C10.2211 8.71086 10.0518 8.90153 9.89798 9.10791C9.74415 9.3142 9.581 9.50487 9.40883 9.6803C9.2364 9.8558 9.09473 9.94347 8.98407 9.94347C8.92851 9.94347 8.85924 9.92798 8.77623 9.89742C8.69325 9.86667 8.63012 9.84031 8.58679 9.81907C8.54384 9.79737 8.47014 9.75442 8.36543 9.68958C8.26053 9.62494 8.20219 9.58953 8.1899 9.58335C7.34668 9.11545 6.62349 8.57992 6.02022 7.97691C5.41714 7.37354 4.88155 6.65042 4.41378 5.8071C4.40763 5.79478 4.37216 5.73628 4.30758 5.6317C4.2429 5.52702 4.1998 5.45325 4.17826 5.41005C4.15672 5.36701 4.13056 5.30388 4.09984 5.22081C4.06912 5.13773 4.05369 5.06852 4.05369 5.01306C4.05369 4.90234 4.14142 4.7607 4.31686 4.58833C4.49226 4.41607 4.68313 4.25289 4.88925 4.09912C5.09554 3.94535 5.2862 3.77602 5.46167 3.59144C5.63708 3.40675 5.72478 3.25295 5.72478 3.12987C5.72478 3.04375 5.70324 2.95596 5.6602 2.86673C5.61712 2.77732 5.55096 2.66821 5.46167 2.53889C5.37235 2.40963 5.31851 2.33276 5.30001 2.30802C5.20778 2.15425 5.11248 1.98962 5.01388 1.81418C4.91528 1.63878 4.80766 1.44326 4.69066 1.22786C4.57376 1.01255 4.4815 0.846296 4.41371 0.72936C4.1984 0.29858 4.03532 0.0645798 3.9245 0.0277787C3.88139 0.00931346 3.81672 0 3.73063 0C3.56435 0 3.34742 0.0307215 3.07969 0.0923584C2.81186 0.153898 2.60111 0.218446 2.44722 0.286259C2.13945 0.415451 1.81325 0.7909 1.46853 1.41248C1.15462 1.99095 0.997681 2.5635 0.997681 3.12971C0.997681 3.29577 1.00845 3.45733 1.02999 3.61443C1.05152 3.77137 1.09001 3.94836 1.14547 4.14536C1.20083 4.3423 1.24549 4.4886 1.27925 4.58387C1.31304 4.6792 1.37614 4.84998 1.4685 5.09627C1.56072 5.3425 1.61618 5.49323 1.63465 5.54862C1.85006 6.15186 2.1055 6.69039 2.40091 7.16438C2.88695 7.9522 3.55025 8.76639 4.3904 9.6066C5.23058 10.4468 6.0446 11.11 6.8325 11.5963C7.30642 11.8916 7.84514 12.147 8.44828 12.3626C8.50371 12.381 8.65444 12.4363 8.90057 12.5289C9.14679 12.6212 9.31764 12.6842 9.41297 12.7181C9.50834 12.752 9.65467 12.7967 9.85145 12.8521C10.0486 12.9076 10.2255 12.9461 10.3824 12.9678C10.5394 12.989 10.701 13 10.8671 13C11.4333 13 12.0059 12.843 12.5845 12.5291C13.206 12.1845 13.5813 11.8582 13.7106 11.5502C13.7786 11.3965 13.8429 11.1857 13.9045 10.9179C13.9662 10.6502 13.9969 10.4333 13.9969 10.267C13.9971 10.1806 13.9878 10.1161 13.9692 10.0726Z"
+									fill="#484564" />
+							</svg>
+
+							<span>+994 55 296 99 39</span>
+
+						</a>
+
+					</nav>
+
+				</div>
+
+			</header>
+
+			<main class="main-2">
+
+				<img src="img/icons/main-2-circle.svg" class="main-2__circle" alt="">
+
+				<img src="img/icons/main-2-angle.svg" class="main-2__angle" alt="">
+
+				<img src="img/icons/main-2-bottom-line.svg" class="main-2__bottom-line" alt="">
+
+				<img src="img/icons/news-line-page.svg" class="main-2__top-line" alt="">
+
+				<section class="news">
 
 
+					<div class="container heading heading--2">Xəbərlər</div>
 
+					<div class="container news__items">
 
-  </div>
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
 
+							<div class="news-item__content">
 
-  <div class="copy-tooltip-overlay">
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
 
-    <div class="copy-tooltip">
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
 
-      <div class="copy-tooltip__close">
+							</div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path fill="#000" fill-rule="evenodd" d="M12.213 10.799l9.9-9.9 1.414 1.415-9.9 9.9 9.9 9.899-1.414 1.414-9.9-9.9-9.9 9.9L.9 22.113l9.9-9.9-9.9-9.9L2.314.9l9.9 9.9z" />
-        </svg>
+						</div>
 
-      </div>
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
 
-      <div class="copy-tooltip__content">
+							<div class="news-item__content">
 
-        <p>Мы с уважением относимся к авторским правам и конфиденциальной информации, поэтому возможность скачивания
-          материалов с сайта по умолчанию ограничена.</p>
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
 
-        <p>Сообщите нам, какой контент и для какой цели вам требуется, и мы поможем вам собрать данные без нарушения
-          чьих-либо прав.</p>
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
 
-      </div>
+							</div>
 
-      <button class="copy-tooltip__btn">Отправить запрос</button>
+						</div>
 
-    </div>
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
 
-  </div>
+							<div class="news-item__content">
 
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
 
-  <script src="js/libs/jquery-3.2.1.min.js"></script>
-  <script src="js/libs/svg4everybody.min.js"></script>
-  <script src="js/libs/picturefill.min.js"></script>
-  <script src="js/libs/lazysizes.min.js"></script>
-  <script src="js/libs/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/libs/swiper.min.js"></script>
-  <script src="js/init-swiper.js"></script>
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+						<div class="news-item" style="background-image: url('img/news/news-1.jpg');">
+
+							<div class="news-item__content">
+
+								<div class="news-item__title">It is a long established fact that a reader will be</div>
+
+								<a href="news.html" class="button button--1 news-item__button">Ətraflı oxu</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="load-more is-shown">
+
+						<div class="load-more__item load-more__item--1"></div>
+
+						<div class="load-more__item load-more__item--2"></div>
+
+						<div class="load-more__item load-more__item--3"></div>
+
+					</div>
+
+				</section>
+
+			</main>
+
+		</div>
+
+		<footer class="footer">
+
+			<img src="img/icons/footer-circle-1.svg" alt="" class="footer__circle-1">
+
+			<img src="img/icons/footer-circle-2.svg" alt="" class="footer__circle-2">
+
+			<div class="footer__inner-wrapper">
+
+				<div class="container footer__inner">
+
+					<div class="row footer-overlay">
+
+						<div class="col-lg-10 footer-overlay__inner">
+
+							<div class="footer-overlay__block"></div>
+
+						</div>
+
+					</div>
+
+					<div class="row footer__top">
+
+						<div class="col-lg-2">
+
+							<a href="index.html" class="footer__logo">
+
+								<svg width="109" height="23" viewBox="0 0 109 23" fill="none"
+									xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<rect x="0.00012207" width="109" height="23" fill="url(#pattern0)" />
+									<defs>
+										<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+											height="1">
+											<use xlink:href="#image0"
+												transform="translate(0 -0.00434783) scale(0.00183486 0.00869565)" />
+										</pattern>
+										<image id="image0" width="545" height="116"
+											xlink:href="data:image/png;base64,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" />
+									</defs>
+								</svg>
+
+							</a>
+
+						</div>
+
+						<div class="col-lg-2">
+
+							<div class="footer-block">
+
+								<div class="footer-block__title">Saytın xəritəsi</div>
+
+								<ul class="footer-block__list">
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Ana səhifə</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Xidmətlər</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">ERP</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Haqqımızda</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Xəbərlər</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Əlaqə</a>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-2">
+
+							<div class="footer-block">
+
+								<div class="footer-block__title">Mercury ERP</div>
+
+								<ul class="footer-block__list">
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Anbar uçotu</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Maliyyə</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Analitik</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Ticarət</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">İstehsalat</a>
+
+									</li>
+
+									<li class="footer-block__item">
+
+										<a href="" class="footer-block__link">Horeca</a>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-2">
+
+							<div class="footer-block">
+
+								<div class="footer-block__title">Əlaqə</div>
+
+								<ul class="footer-block__list">
+
+									<li class="footer-block__item footer-block__item--phone">
+
+										<a href="tel:+994552969939" class="footer-block__link">
+
+											<img src="img/icons/white-phone.svg" alt="">
+
+											<span>+994 55 296 99 39</span>
+
+										</a>
+
+									</li>
+
+									<li class="footer-block__item footer-block__item--adress">
+
+										<a class="footer-block__link">
+
+											<img src="img/icons/home.svg" alt="">
+
+											<span>Fizuli 49, SKS plaza</span>
+
+										</a>
+
+									</li>
+
+									<li class="footer-block__item footer-block__item--email">
+
+										<a href="mailto:support@dit.az" class="footer-block__link">
+
+											<img src="img/icons/email.svg" alt="">
+
+											<span>support@dit.az</span>
+
+										</a>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="footer__bottom">
+
+						<div class="footer-copyright">
+
+							<span class="footer-copyright__text">© 2019 All rights reserved. Created by</span>
+
+							<img src="img/clients/skybox.svg" alt="" class="footer-copyright__logo">
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+	<script>
+		function initMap() {
+			// Styles a map in night mode.
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center: {
+					lat: 55.559473,
+					lng: 36.704430
+				},
+				zoom: 15,
+				styles: [{
+						elementType: 'geometry',
+						stylers: [{
+							color: '#242f3e'
+						}]
+					},
+					{
+						elementType: 'labels.text.stroke',
+						stylers: [{
+							color: '#242f3e'
+						}]
+					},
+					{
+						elementType: 'labels.text.fill',
+						stylers: [{
+							color: '#746855'
+						}]
+					},
+					{
+						featureType: 'administrative.locality',
+						elementType: 'labels.text.fill',
+						stylers: [{
+							color: '#d59563'
+						}]
+					},
+					{
+						featureType: 'poi',
+						elementType: 'labels.text.fill',
+						stylers: [{
+							color: '#d59563'
+						}]
+					},
+					{
+						featureType: 'poi.park',
+						elementType: 'geometry',
+						stylers: [{
+							color: '#263c3f'
+						}]
+					},
+					{
+						featureType: 'poi.park',
+						elementType: 'labels.text.fill',
+						stylers: [{
+							color: '#6b9a76'
+						}]
+					},
+					{
+						featureType: 'road',
+						elementType: 'geometry',
+						stylers: [{
+							color: '#38414e'
+						}]
+					},
+					{
+						featureType: 'road',
+						elementType: 'geometry.stroke',
+						stylers: [{
+							color: '#212a37'
+						}]
+					},
+					{
+						featureType: 'road',
+						elementType: 'labels.text.fill',
+						stylers: [{
+							color: '#9ca5b3'
+						}]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'geometry',
+						stylers: [{
+							color: '#746855'
+						}]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'geometry.stroke',
+						stylers: [{
+							color: '#1f2835'
+						}]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'labels.text.fill',
+						stylers: [{
+							color: '#f3d19c'
+						}]
+					},
+					{
+						featureType: 'transit',
+						elementType: 'geometry',
+						stylers: [{
+							color: '#2f3948'
+						}]
+					},
+					{
+						featureType: 'transit.station',
+						elementType: 'labels.text.fill',
+						stylers: [{
+							color: '#d59563'
+						}]
+					},
+					{
+						featureType: 'water',
+						elementType: 'geometry',
+						stylers: [{
+							color: '#17263c'
+						}]
+					},
+					{
+						featureType: 'water',
+						elementType: 'labels.text.fill',
+						stylers: [{
+							color: '#515c6d'
+						}]
+					},
+					{
+						featureType: 'water',
+						elementType: 'labels.text.stroke',
+						stylers: [{
+							color: '#17263c'
+						}]
+					}
+				]
+			});
+
+			var marker = new google.maps.Marker({
+				position: {
+					lat: 55.559473,
+					lng: 36.704430
+				},
+				map: map
+			});
+
+		}
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU05kbFWxihsarp2xTdE4j4OHqVmUNDaI&callback=initMap"
+		async defer></script>
+
 </body>
 
 </html>

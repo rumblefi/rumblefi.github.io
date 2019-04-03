@@ -1,0 +1,14 @@
+@import "_mixins/font-face";
+
+@include font-face("SamsungSharpSans", "../fonts/SamsungSharpSans/SamsungSharpSans");
+@include font-face("SamsungSharpSans-Medium", "../fonts/SamsungSharpSans-Medium/SamsungSharpSans-Medium");
+@include font-face("SamsungSharpSans-Bold", "../fonts/SamsungSharpSans-Bold/SamsungSharpSans-Bold");
+@include font-face("SanFrancisco-Black", "../fonts/SanFrancisco-Black/SanFrancisco-Black");
+@include font-face("SanFrancisco-Bold", "../fonts/SanFrancisco-Bold/SanFrancisco-Bold");
+@include font-face("SanFrancisco-ExtraBold", "../fonts/SanFrancisco-ExtraBold/SanFrancisco-ExtraBold");
+@include font-face("SanFrancisco-Light", "../fonts/SanFrancisco-Light/SanFrancisco-Light");
+@include font-face("SanFrancisco-Medium", "../fonts/SanFrancisco-Medium/SanFrancisco-Medium");
+@include font-face("SanFrancisco-Regular", "../fonts/SanFrancisco-Regular/SanFrancisco-Regular");
+@include font-face("SanFrancisco-SemiBold", "../fonts/SanFrancisco-SemiBold/SanFrancisco-SemiBold");
+@include font-face("SanFrancisco-Thin", "../fonts/SanFrancisco-Thin/SanFrancisco-Thin");
+@include font-face("SanFrancisco-UltraLight", "../fonts/SanFrancisco-UltraLight/SanFrancisco-UltraLight");
