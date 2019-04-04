@@ -135,8 +135,10 @@ $(function () {
 
 	$('.burger').on('click', function () {
 		const that = $(this)
+		const menu = $(".header-nav")
 		that.toggleClass('burger--close')
-		$('body').toggleClass('is-overflowed')
+		menu.toggleClass('is-active')
+		$('body').addClass('is-overflowed')
 	});
 
 
