@@ -1,1 +1,0 @@
-function reinitSelect(e){if(e(".select-form__group").length){e(".select-form__group").styler();new PerfectScrollbar(".jq-selectbox__dropdown ul",{wheelSpeed:.5})}}reinitSelect(jQuery);
