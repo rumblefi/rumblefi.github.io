@@ -143,17 +143,8 @@ span.select2-selection.select2-selection--single {
         margin-right: auto;
 
         @include md() {
-            width: 95px;
-            height: 20px;
-        }
-
-        svg {
-
-            @include md() {
-                width: 95px;
-                height: 20px;
-            }
-
+            width: auto;
+            height: auto;
         }
 
     }
@@ -1937,7 +1928,7 @@ span.select2-selection.select2-selection--single {
             height: 370px;
 
             @include md() {
-                height: 400px;
+                height: 450px;
             }
 
         }
@@ -1961,6 +1952,7 @@ span.select2-selection.select2-selection--single {
 
             @include md() {
                 padding: 15px;
+                border-radius: 0;
             }
 
         }
@@ -2441,17 +2433,10 @@ span.select2-selection.select2-selection--single {
     border-radius: 20px;
     padding-top: 70px;
 
-    &__close {
-        cursor: pointer;
-        position: absolute;
-        right: 30px;
-        top: 25px;
-
-        img {
-            width: 20px;
-            height: 20px;
-        }
-
+    @include md() {
+        padding: 20px;
+        padding-top: 70px;
+        padding-bottom: 30px;
     }
 
     &__fields {
@@ -2477,11 +2462,16 @@ span.select2-selection.select2-selection--single {
 
     }
 
-    .fancybox-button {
-        display: none;
-    }
+}
 
-
+.fancybox-slide--html .fancybox-close-small{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    padding: 0;
+    color: #000;
+    width: 40px;
+    height: 40px;
 }
 
 .fancybox-container {
@@ -2492,8 +2482,18 @@ span.select2-selection.select2-selection--single {
     padding: 40px;
     color: #000;
 
+    @include md() {
+        padding: 30px;
+        padding-top: 60px;    
+    }
+
     &__title {
         margin-bottom: 10px;
+
+        @include md() {
+            font-size: 28px;
+        }
+
     }
 
 }

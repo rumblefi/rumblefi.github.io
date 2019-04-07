@@ -100,38 +100,22 @@ $(function () {
 	erpTabsSlider()
 
 
-	const closePopup = () => {
-		$.fancybox.close(true)
-		$("#contact-popup").removeClass('is-hidden')
-	};
-
 	const showPopup = (target) => {
-
-		$("#contact-popup").addClass('is-hidden')
-
 		$.fancybox.open({
 			src: target,
 			type: 'inline',
 			touch: false
 		});
-
 	};
-
-
-	$('.js-popup-close').on('click', closePopup);
-
 
 	$('#contact-popup').on('submit', function (event) {
 		event.preventDefault()
-
 		setTimeout(() => {
-
 			showPopup('#success-popup')
-
 		}, 200);
-
 	});
 
+	$.fancybox.defaults.closeExisting = true;
 
 	$('.burger').on('click', function () {
 		const that = $(this)
