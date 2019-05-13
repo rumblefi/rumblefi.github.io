@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title></title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<div class="page-inner">
+
+		<div class="page-content">
+
+			<header class="header">
+
+				<div class="container header__container">
+
+					<a href="index.html" class="header__logo">Recipe Box</a>
+
+					<a href="form.html" class="header__add-recipe">Add Recipe</a>
+
+				</div>
+
+			</header>
+
+			<main class="main">
+
+				<div class="container">
+
+					<h1 class="h1">Add a new Recipe</h1>
+
+					<form action="" class="form" id="form">
+
+						<div class="form__body">
+
+							<div class="form__partial">
+
+								<label for="title" class="form__label">Title</label>
+
+								<input type="text" class="form__field" name="title" id="title" autocomplete="off">
+
+							</div>
+
+							<div class="form__partial">
+
+								<label for="description" class="form__label">Description</label>
+
+								<textarea class="form__field form__field--textarea" name="description" id="description" ></textarea>
+
+							</div>
+
+							<div class="form__partial">
+
+								<label for="imageURL" class="form__label">Image URL</label>
+
+								<input type="text" class="form__field" name="imageURL" id="imageURL" autocomplete="off">
+
+							</div>
+
+							<div class="form__partial">
+
+								<div class="form__label">Ingredients</div>
+
+								<div class="form__ingridients">
+
+									<div class="form__ingidient-wrapper" style="display: none;">
+
+										<input type="text" class="form__field form__field--ingredient" autocomplete="off">
+
+										<div class="form__ingidient-close"></div>
+
+									</div>
+
+									<div class="form__ingidient-wrapper">
+
+										<input type="text" class="form__field form__field--ingredient" name="ingredient0" autocomplete="off">
+
+										<div class="form__ingidient-close"></div>
+
+									</div>
+
+								</div>
+
+								<button class="button button--1 form__ingidient-button" type="button">Add
+									ingredient</button>
+
+							</div>
+
+							<div class="form__partial">
+
+								<label for="instructions" class="form__label">Instructions</label>
+
+								<textarea name="instructions" id="instructions"
+									class="form__field form__field--textarea"></textarea>
+
+							</div>
+
+						</div>
+
+						<div class="form__buttons">
+
+							<button class="button button--1">Add Recipe</button>
+
+							<a href="index.html" class="button button--3">Back</a>
+
+						</div>
+
+					</form>
+
+				</div>
+
+			</main>
+
+		</div>
+
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>

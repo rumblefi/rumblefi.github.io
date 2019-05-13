@@ -1,194 +1,119 @@
-$(window).on('load', function () {
-
-	setTimeout(() => {
-
-		$("#preloader").addClass('is-loaded')
-
-		$('#js-hero-slider').slickAnimation()
-
-	}, 1000);
-
-});
-
 $(function () {
 
-	const getElHeight = (target) => $(target).outerHeight()
-
-	const header = $('.header')
-
-	const getHeaderHeight = (target) => getElHeight(header)
-
-	const headerHeight = getHeaderHeight()
-
-
-	$(window).on('scroll', (event) => {
-
-		const scrollTop = $(event.currentTarget).scrollTop()
-
-		if (headerHeight <= scrollTop) {
-			header.addClass('is-active')
-		} else {
-			header.removeClass('is-active')
-		}
-
-	})
-
-	const getWWindowWidth = () => $(window).width()
-
-	const setHeaderWidth = () => header.css('width', getWWindowWidth())
-
-	setHeaderWidth()
-
-	$(window).on('resize', setHeaderWidth)
-
-	const customPaging = () => {
-		return function (slick, index) {
-			return '<div class="slider-nav__dot" ></div>';
-		}
+	function getWindowWidth() {
+		return $(window).width()
 	}
 
-	$('#js-hero-slider').slick({
-		prevArrow: '.hero-slider__prev',
-		nextArrow: '.hero-slider__next',
-		dots: true,
-		appendDots: '.hero-slider__dots',
-		customPaging: customPaging(),
-		draggable: false,
-		// autoplay: true,
-		autoplaySpeed: 5000
-	});
+	$(".header").css('width', getWindowWidth())
 
+	function addIngredientInput() {
+		let numberClicked = 1
 
-	$(".custom-scroll--y").mCustomScrollbar({
-		scrollInertia: 0,
-		mouseWheel: {
-			preventDefault: true
-		},
-	});
-
-	$('.opportunities-tabs-list__item').on('click', function () {
-		const that = $(this);
-		const parent = that.closest('.opportunities')
-		const target = $( that.attr('data-target') )
-		const slider = target.find('.opportunities-tabs-slider')
-		parent.find('.opportunities-tabs-list__item').not( that ).removeClass('is-active')
-		that.addClass('is-active')
-		target.addClass('is-active').siblings().removeClass('is-active')
-		slider.slick('setPosition');
-	});
-
-
-	function erpTabsSlider() {
-		$('.opportunities-tabs-content__item').each(function () {
-			const that = $(this)
-			const slider = that.find('.opportunities-tabs-slider')
-			const prevArrow = that.find('.opportunities-tabs__prev')
-			const nextArrow = that.find('.opportunities-tabs__next')
-			const dotsContainer = that.find('.opportunities-tabs__dots')
-
-			slider.slick({
-				prevArrow: prevArrow,
-				nextArrow: nextArrow,
-				dots: true,
-				appendDots: dotsContainer,
-				customPaging: customPaging(),
-			});
-
-		})
-	}
-
-	erpTabsSlider()
-
-
-	const showPopup = (target) => {
-		$.fancybox.open({
-			src: target,
-			type: 'inline',
-			touch: false
+		$('.form__ingidient-button').on('click', function () {
+			const template = $(".form__ingidient-wrapper").filter(':hidden')
+			const clonedTemplate = template.clone(true)
+			const input = clonedTemplate.find('.form__field')
+			const closedIcon = clonedTemplate.find('.form__ingidient-close')
+			const container = $(".form__ingridients")
+			container.append(clonedTemplate)
+			clonedTemplate.show()
+			closedIcon.addClass('is-shown')
+			input.attr('name', `ingredient${numberClicked}`)
+			numberClicked++
 		});
-	};
+	}
 
-	$('#contact-popup').on('submit', function (event) {
-		event.preventDefault()
-		setTimeout(() => {
-			showPopup('#success-popup')
-		}, 200);
-	});
+	addIngredientInput()
 
-	$.fancybox.defaults.closeExisting = true;
 
-	$('.burger').on('click', function () {
+	function removeIngrediment() {
 		const that = $(this)
-		const menu = $(".header-nav")
-		that.toggleClass('burger--close')
-		menu.toggleClass('is-active')
-		$('body').toggleClass('is-overflowed')
-	});
-
-	function setHeightNavMobile() {
-		if ($(window).width() < 993) {
-			return $(".header-nav").css('height', window.innerHeight)
-		}
+		const parent = that.closest('.form__ingidient-wrapper')
+		parent.remove()
 	}
 
-	setHeightNavMobile()
+	$('.form__ingidient-close').on('click', removeIngrediment);
 
 
-	function setHeroHeight() {
-		return $(".hero").css('height', window.innerHeight)
-	}
+	function handleSubmitForm() {
+		event.preventDefault()
 
-	setHeroHeight()
-
-
-	$('.js-subnav-toggler').on('click', function () {
-
-		if ($(window).width() < 993) {
-			const that = $(this)
-			const drop = that.next('.header-subnav')
-			const parent = that.closest('.js-drop')
-			that.toggleClass('is-active')
-			drop.slideToggle()
-			parent.siblings().find('.js-subnav-toggler').next('.header-subnav').slideUp()
-			parent.siblings().find('.js-subnav-toggler').removeClass('is-active')
-		}
-
-	});
-
-
-	function mobileSlider(target) {
-		$(window).on('load resize orientationchange', function () {
-			$(target).each(function () {
-				const $carousel = $(this);
-				const $carouselWrapper = $(this).closest('.js-mobile-slider-wrapper');
-				const $carouselDotsContainer = $carouselWrapper.find('.js-mobile-slider-dots');
-				const $prev = $carouselWrapper.find('.js-mobile-slider-prev');
-				const $next = $carouselWrapper.find('.js-mobile-slider-next');
-				if ($(window).width() > 992) {
-					if ($carousel.hasClass('slick-initialized')) {
-						$carousel.slick('unslick');
-					}
-				} else {
-					if (!$carousel.hasClass('slick-initialized')) {
-						$carousel.slick({
-							slidesToShow: 1,
-							prevArrow: $prev,
-							nextArrow: $next,
-							dots: true,
-							appendDots: $carouselDotsContainer,
-							customPaging: customPaging(),
-							// autoplay: true,
-							autoplaySpeed: 5000,
-							pauseOnFocus: false,
-							pauseOnHover: false,
-							pauseOnDotsHover: false,
-						});
-					}
+		$('.form__field--ingredient').each(function () {
+			$(this).rules("add", {
+				required: true,
+				minlength: 5,
+				messages: {
+					required: "Please enter ingredient",
+					minlength: "Ingredient must consist at least 5 characters"
 				}
-			});
+			})
+		});
+
+		//if form submitted
+		if ($(this).validate().form()) {
+			alert('submitted')
+		}
+	}
+
+	$("#form").on('submit', handleSubmitForm)
+
+	$("#form").validate({
+		rules: {
+			title: {
+				required: true,
+				minlength: 5
+			},
+			description: {
+				required: true,
+				minlength: 26
+			},
+			imageURL: {
+				required: true,
+				url: true
+			},
+			instructions: {
+				required: true,
+				minlength: 26
+			},
+		},
+		messages: {
+			title: {
+				required: "Please enter title",
+				minlength: "Title must consist at least 5 characters"
+			},
+			description: {
+				required: "Please provide description",
+				minlength: "Description must consist at least 26 characters"
+			},
+			imageURL: {
+				required: "Please provide image URL",
+				url: "Please provide valid URL"
+			},
+			instructions: {
+				required: "Please provide instructions",
+				minlength: "instructions must consist at least 26 characters"
+			},
+		}
+	});
+
+	
+	function closePopup() {
+		return $.fancybox.close(true)
+	}
+
+	$('.js-close-popup').on('click', closePopup);
+
+
+	function showDeletePopup() {
+		return $.fancybox.open({
+			src  : '#delete-popup',
+			type : 'inline',
+			opts : {
+				touch: false
+			}
 		});
 	}
 
-	mobileSlider('.js-mobile-slider')
+	$('.js-delete-recipe').on('click', showDeletePopup);
 
 });

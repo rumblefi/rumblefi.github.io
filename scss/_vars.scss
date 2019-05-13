@@ -9,9 +9,10 @@ $gutter: $grid-gutter-width;
 
 
 //colors
-$body-color: #EAEAEA;
-$body-bg: #13112A;
+$body-color: #000;
 
 
 //fonts
-$default-font: "SanFrancisco-Regular";
+$default-font: "RobotoRegular", sans-serif;
+$medium-font: "RobotoMedium", sans-serif;
+$bold-font: "RobotoBold", sans-serif;
