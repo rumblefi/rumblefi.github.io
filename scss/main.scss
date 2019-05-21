@@ -108,11 +108,16 @@ span.select2-selection.select2-selection--single {
 	max-width: 1220px;
 }
 
+.page-content {
+	width: 100vw;
+}
+
 .header {
 	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
+	width: 100vw;
 	z-index: 9999;
 	padding-top: 11px;
 	padding-bottom: 18px;
@@ -525,8 +530,8 @@ span.select2-selection.select2-selection--single {
 
 		}
 
-		&__triangle{
-			
+		&__triangle {
+
 			@include md() {
 				max-width: 260px;
 			}
@@ -875,7 +880,7 @@ span.select2-selection.select2-selection--single {
 	&-tabs {
 		margin-top: -140px;
 
-		&__controls{
+		&__controls {
 			display: none !important;
 
 			@include md() {
@@ -883,9 +888,10 @@ span.select2-selection.select2-selection--single {
 				margin-bottom: 20px;
 			}
 
-			@media screen and (orientation:landscape) {
+			@include landscape() {
 				display: none !important;
 			}
+
 
 		}
 
@@ -921,7 +927,7 @@ span.select2-selection.select2-selection--single {
 					padding-bottom: 30px;
 				}
 
-				@media screen and (orientation:landscape) {
+				@include landscape() {
 					height: 230px !important;
 				}
 
@@ -983,7 +989,7 @@ span.select2-selection.select2-selection--single {
 				color: #616161;
 				transition: 0.3s color;
 
-				@media screen and (orientation:landscape) {
+				@include landscape() {
 					font-size: 20px;
 					max-width: 100%;
 				}
@@ -1033,6 +1039,12 @@ span.select2-selection.select2-selection--single {
 		padding: 40px 33px 38px;
 		transition: 0.3s;
 
+		@include md() {
+			border-top: 1px solid #dcdcdc;
+			border-right: 1px solid #dcdcdc;
+			border-bottom: none !important;
+		}
+
 		@include sm() {
 			padding-left: 20px;
 			padding-right: 20px;
@@ -1042,10 +1054,24 @@ span.select2-selection.select2-selection--single {
 		&:nth-child(2),
 		&:nth-child(3) {
 			border-top: 1px solid #dcdcdc;
+
+			@include md() {
+				border: 1px solid #dcdcdc;
+			}
+
 		}
 
 		&:nth-child(3n) {
 			border-right: 1px solid #dcdcdc;
+
+			@include md() {
+				border: 1px solid #dcdcdc;
+			}
+
+		}
+
+		&:last-child {
+			border-bottom: 1px solid #dcdcdc !important;
 		}
 
 		&:hover {
@@ -1068,7 +1094,7 @@ span.select2-selection.select2-selection--single {
 				@include md() {
 					opacity: 0;
 				}
-				
+
 
 			}
 
@@ -1220,9 +1246,14 @@ span.select2-selection.select2-selection--single {
 
 	&-item-wrapper {
 
+		@include landscape() {
+			width: 50% !important;
+		}
+
 		@include md() {
 			margin-bottom: 30px !important;
 		}
+
 
 		&:last-child {
 
@@ -1314,6 +1345,10 @@ span.select2-selection.select2-selection--single {
 				padding-right: 30px;
 			}
 
+			@include landscape() {
+				padding: 30px;
+			}
+
 		}
 
 		&__title {
@@ -1326,6 +1361,10 @@ span.select2-selection.select2-selection--single {
 			@include md() {
 				font-size: 30px;
 				line-height: 1.15;
+			}
+
+			@include landscape() {
+				font-size: 20px;
 			}
 
 			@include sm() {
@@ -1556,7 +1595,7 @@ span.select2-selection.select2-selection--single {
 	background-color: #008B7A;
 	overflow: hidden;
 
-	@include sm() {
+	@include md() {
 		padding-top: 100px;
 		padding-bottom: 100px;
 	}
@@ -1573,13 +1612,8 @@ span.select2-selection.select2-selection--single {
 		padding-right: 20px;
 
 		@include md() {
-			font-size: 60px;
-			line-height: 1.1;
-		}
-
-		@include sm() {
 			font-size: 40px;
-			margin-bottom: 40px;
+			margin-bottom: 50px;
 		}
 
 	}
@@ -1600,10 +1634,11 @@ span.select2-selection.select2-selection--single {
 	&__triangle {
 		position: absolute;
 		left: 30px;
-		bottom: 70px;
+		bottom: 100px;
 
-		@include sm() {
-			max-width: 110px;
+		@include md() {
+			max-width: 150px;
+			left: 0;
 		}
 
 	}
@@ -1614,8 +1649,9 @@ span.select2-selection.select2-selection--single {
 		right: 100px;
 		top: 0px;
 
-		@include sm() {
-			max-width: 150px;
+		@include md() {
+			max-width: 170px;
+			right: 50px;
 		}
 
 	}
@@ -1624,6 +1660,13 @@ span.select2-selection.select2-selection--single {
 		position: absolute;
 		bottom: -150px;
 		right: 0;
+
+		@include md() {
+			right: -80px;
+			bottom: 0;
+			max-width: 230px;
+		}
+
 	}
 
 	&__button {
@@ -1823,10 +1866,6 @@ span.select2-selection.select2-selection--single {
 		@include md() {
 			display: flex;
 			margin-bottom: 30px;
-		}
-
-		@include sm() {
-			max-width: 160px;
 		}
 
 	}
@@ -2318,6 +2357,20 @@ span.select2-selection.select2-selection--single {
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+
+		@include md() {
+			top: 50px;
+			transform: translateX(-50%);
+		}
+
+		img{
+
+			@include md() {
+				max-width: 230px;
+			}
+
+		}
+
 	}
 
 	&__triangle {
@@ -3212,11 +3265,6 @@ span.select2-selection.select2-selection--single {
 		top: 0;
 		bottom: 0;
 		overflow: hidden;
-
-		@include md() {
-			display: none;
-		}
-
 	}
 
 	&__triangle {
@@ -3224,6 +3272,11 @@ span.select2-selection.select2-selection--single {
 		top: 0;
 		right: 0;
 		pointer-events: none;
+
+		@include md() {
+			max-width: 180px;
+		}
+
 	}
 
 	&__title {
@@ -3235,6 +3288,7 @@ span.select2-selection.select2-selection--single {
 		margin-bottom: 17px;
 
 		@include md() {
+			position: relative;
 			font-size: 40px;
 			margin-bottom: 30px;
 		}
@@ -3280,6 +3334,7 @@ span.select2-selection.select2-selection--single {
 		line-height: 1.45;
 
 		@include md() {
+			position: relative;
 			font-size: 18px;
 			line-height: 1.2;
 		}
@@ -3290,6 +3345,10 @@ span.select2-selection.select2-selection--single {
 
 .project-about {
 	padding-bottom: 100px;
+
+	@include md() {
+		padding-bottom: 60px;
+	}
 
 	&__top-container {
 		margin-bottom: 72px;
@@ -3527,7 +3586,7 @@ span.select2-selection.select2-selection--single {
 		@include md() {
 			font-size: 40px;
 			padding-top: 80px;
-			margin-bottom: 60px;
+			margin-bottom: 45px;
 		}
 
 	}
@@ -3616,7 +3675,7 @@ span.select2-selection.select2-selection--single {
 
 		@include md() {
 			justify-content: center;
-			height: 500px;
+			height: 375px;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-image: url('../img/apply-solution.jpg');
@@ -3817,7 +3876,7 @@ span.select2-selection.select2-selection--single {
 		@include md() {
 			font-size: 20px;
 			line-height: normal;
-			margin-bottom: 15px;
+			margin-bottom: 20px;
 		}
 
 		span {
@@ -3953,7 +4012,30 @@ span.select2-selection.select2-selection--single {
 
 .subscribe-instagram {
 
+	.container{
+
+		@include md() {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+	}
+
+	.row{
+
+		@include md() {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+	}
+
 	&__partial {
+
+		@include md() {
+			padding-left: 0;
+			padding-right: 0;
+		}
 
 		&--first {
 			position: relative;
@@ -3984,10 +4066,20 @@ span.select2-selection.select2-selection--single {
 
 	&__item {
 
+		@include md() {
+			display: flex !important;
+			justify-content: center;
+		}
+
 		img {
 			height: 245px;
 			width: 100%;
 			object-fit: cover;
+
+			@include md() {
+				width: 245px;
+			}
+
 		}
 
 	}
@@ -4185,7 +4277,7 @@ span.select2-selection.select2-selection--single {
 
 		@include md() {
 			font-size: 60px;
-			margin-bottom: 85px;
+			margin-bottom: 40px;
 		}
 
 		@include sm() {
@@ -4209,10 +4301,21 @@ span.select2-selection.select2-selection--single {
 
 		&:first-child {
 			margin-top: 40px;
+
+			img {
+				width: 55px;
+				height: 51px;
+			}
+
 		}
 
 		&:nth-child(2) {
 			margin-top: 80px;
+
+			img {
+				width: 54px;
+				height: 50px;
+			}
 
 			@include md() {
 				margin-top: 0;
@@ -4223,14 +4326,43 @@ span.select2-selection.select2-selection--single {
 		&:nth-child(3) {
 			margin-top: 120px;
 
+			img {
+				width: 62px;
+				height: 48px;
+			}
+
 			@include md() {
 				margin-top: 0;
 			}
 
 		}
 
+		&:nth-child(4) {
+
+			img {
+				width: 65px;
+				height: 57px;
+			}
+
+		}
+
+		&:nth-child(5) {
+
+			img {
+				width: 57px;
+				height: 52px;
+			}
+
+		}
+
 		&:last-child {
 			margin-bottom: 0;
+
+			img {
+				width: 53px;
+				height: 67px;
+			}
+
 		}
 
 	}
@@ -4245,6 +4377,11 @@ span.select2-selection.select2-selection--single {
 		background-color: #f4f4f4;
 		text-align: center;
 		transition: 0.3s;
+
+		@include md() {
+			height: 280px;
+			padding-top: 125px;
+		}
 
 		@include sm() {
 			padding-left: 20px;
@@ -4289,6 +4426,7 @@ span.select2-selection.select2-selection--single {
 
 			@include md() {
 				max-width: 360px;
+				margin-bottom: 15px;
 			}
 
 		}
@@ -4388,7 +4526,7 @@ span.select2-selection.select2-selection--single {
 	width: 255px;
 	height: 50px;
 	z-index: 146;
-  }
+}
 
 .filter-btn {
 	display: flex !important;
@@ -4429,7 +4567,7 @@ span.select2-selection.select2-selection--single {
 		padding-bottom: 60px;
 
 		@include md() {
-			padding: 40px 25px;
+			padding: 40px 15px;
 		}
 
 	}
@@ -4445,6 +4583,7 @@ span.select2-selection.select2-selection--single {
 			font-size: 30px;
 			line-height: 1;
 			margin-bottom: 40px;
+			text-align: center;
 		}
 
 	}
@@ -4643,11 +4782,11 @@ span.select2-selection.select2-selection--single {
 
 	$this: &;
 
-	&.is-active{
+	&.is-active {
 
-		#{$this}__arrow{
-			
-			&::before{
+		#{$this}__arrow {
+
+			&::before {
 				transform: rotate(180deg);
 			}
 
@@ -4884,24 +5023,54 @@ span.select2-selection.select2-selection--single {
 
 		&-header {
 
+			@include md() {
+				display: flex;
+			}
+
 			&__item {
+
+				@include md() {
+					font-size: 14px;
+				}
 
 				&:first-child {
 					width: 76px;
+
+					@include md() {
+						width: 55px;
+					}
+
 				}
 
 				&:nth-child(2) {
 					width: 32%;
 					margin-right: auto;
+
+					@include md() {
+						width: auto;
+						flex-shrink: 1;
+						white-space: nowrap;
+					}
+
 				}
 
 				&:nth-child(3) {
 					width: 143px;
 					margin-right: auto;
+
+					@include md() {
+						display: none;
+					}
+
 				}
 
 				&:last-child {
 					width: 23.9%;
+
+					@include md() {
+						display: none;
+					}
+
 				}
 
 			}
@@ -4914,7 +5083,7 @@ span.select2-selection.select2-selection--single {
 
 				@include md() {
 					position: relative;
-					padding-left: 40px;
+					padding-left: 55px;
 				}
 
 			}
@@ -5021,7 +5190,7 @@ span.select2-selection.select2-selection--single {
 		@include md() {
 			font-size: 18px;
 			padding: 20px;
-			padding-left: 40px;
+			padding-left: 55px;
 			margin: 0;
 			white-space: nowrap;
 		}
@@ -5045,10 +5214,10 @@ span.select2-selection.select2-selection--single {
 			width: 74.5%;
 			transition: 0.3s color;
 
-			&:hover{
+			&:hover {
 				color: #00beaf;
 
-				span{
+				span {
 					border-color: #00beaf;
 				}
 
@@ -5147,10 +5316,10 @@ span.select2-selection.select2-selection--single {
 		text-transform: uppercase;
 		transition: 0.3s;
 
-		&:hover{
+		&:hover {
 			color: #00beaf;
 
-			#{$this}__circle{
+			#{$this}__circle {
 				background-color: transparent;
 				border-color: #00beaf;
 			}
@@ -5424,6 +5593,10 @@ span.select2-selection.select2-selection--single {
 			margin-bottom: 45px;
 
 			@include md() {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
 				font-size: 16px;
 				min-width: 160px;
 				max-width: 160px;
@@ -5462,8 +5635,8 @@ span.select2-selection.select2-selection--single {
 	padding-bottom: 150px;
 
 	@include md() {
-		padding-top: 70px;
-		padding-bottom: 80px;
+		padding-top: 50px;
+		padding-bottom: 55px;
 	}
 
 	&__top {
@@ -5532,6 +5705,7 @@ span.select2-selection.select2-selection--single {
 	}
 
 }
+
 
 .rotateBox {
 	transform: rotate(var(--r));

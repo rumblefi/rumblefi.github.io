@@ -161,6 +161,12 @@ $(function () {
 					slidesToShow: 2,
 				}
 			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
 		]
 	})
 
@@ -182,6 +188,12 @@ $(function () {
 		slider2.slick('setPosition');
 	});
 
+	$('#glossaryFilterBtn').on('click', function () {
+		const that = $(this)
+		const target = $(that.attr('data-target'))
+		const slider1 = target.find('#js-glossary-letters')
+		slider1.slick('setPosition');
+	});
 
 	$('.glossary-letters__item').on('click', function () {
 		const that = $(this)
@@ -528,7 +540,8 @@ $(function () {
 					if (!$carousel.hasClass('slick-initialized')) {
 						$carousel.slick({
 							arrows: false,
-							slidesToShow: 10
+							slidesToShow: 10,
+							slidesToScroll: 10
 						});
 					}
 				}
@@ -649,7 +662,5 @@ $(function () {
 	}
 
 	customVanillaTilt()
-
-
 
 });
