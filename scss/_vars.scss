@@ -1,6 +1,6 @@
 
 // Customization Bootstrap vars from "assets/libs/bootstrap/scss/_variables.scss"
-$grid-gutter-width: 30px;
+$grid-gutter-width: 40px;
 $grid-columns: 12;
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1170px);
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
@@ -13,6 +13,6 @@ $body-color: #000;
 
 
 //fonts
-$default-font: "RobotoRegular", sans-serif;
-$medium-font: "RobotoMedium", sans-serif;
-$bold-font: "RobotoBold", sans-serif;
+$light-font: "FuturaPT-Light";
+$default-font: "FuturaPT-Light";
+$demi-font: "FuturaPT-Book";

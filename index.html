@@ -3,107 +3,1849 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
 
-	<title></title>
-	<meta name="description" content="">
+    <title></title>
+    <meta name="description" content="">
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<!-- Template Basic Images End -->
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
 
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
 
-	<div class="page-inner">
+    <div class="page-inner">
 
-		<div class="page-content">
+        <div class="page-content">
 
-			<header class="header">
+            <header class="header js-section" id="header">
 
-				<div class="container header__container">
+                <div class="container header__container">
 
-					<a href="index.html" class="header__logo">Recipe Box</a>
+                    <a href="/" class="header__logo">
 
-					<a href="form.html" class="header__add-recipe">Add Recipe</a>
+                        <img src="img/logo/logo.svg" alt="">
 
-				</div>
+                    </a>
 
-			</header>
+                    <div class="header-nav">
 
-			<main class="main" >
+                        <ul class="header-nav__list">
 
-				<div class="container">
+                            <li class="header-nav__item">
 
-					<h1 class="h1">Recipies</h1>
+                                <a href="/#digital-section" class="header-nav__link" data-target="#digital-section">
 
-					<div class="recipes">
+                                    <div class="header-nav__icon">
 
-						<div class="recipe">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px"
+                                            height="27px" viewBox="0 0 27 27" enable-background="new 0 0 27 27"
+                                            xml:space="preserve">
+                                            <path d="M2,2h23v23H2V2z M0,27h27V0H0V27z" />
+                                        </svg>
 
-							<img src="https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/2048x1024/landscape-1520957481-grilled-salmon-horizontal.jpg?resize=1200:*"
-								alt="">
+                                    </div>
 
-							<div class="recipe__body">
+                                    <div class="header-nav__text">Трансформация</div>
 
-								<a href="recipe.html" class="recipe__title">Expresso Express</a>
+                                </a>
 
-								<div class="recipe__short-descr">A strong punch to the mind</div>
+                            </li>
 
-								<div class="recipe__buttons">
+                            <li class="header-nav__item">
 
-									<a href="form.html" class="button button--1 recipe__button">Edit</a>
+                                <a href="/#directions-section" class="header-nav__link"
+                                    data-target="#directions-section">
 
-									<button class="button button--2 recipe__button js-delete-recipe">Delete</button>
+                                    <div class="header-nav__icon">
 
-								</div>
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px"
+                                            height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30"
+                                            xml:space="preserve">
+                                            <g>
+                                                <defs>
+                                                    <rect id="SVGID_1_" width="30" height="30" />
+                                                </defs>
+                                                <clipPath id="SVGID_2_">
+                                                    <use xlink:href="#SVGID_1_" overflow="visible" />
+                                                </clipPath>
+                                                <path clip-path="url(#SVGID_2_)"
+                                                    d="M15,2c7.168,0,13,5.832,13,13s-5.832,13-13,13S2,22.168,2,15S7.832,2,15,2 M15,0
+                                                                    C6.716,0,0,6.716,0,15s6.716,15,15,15s15-6.716,15-15S23.284,0,15,0" />
+                                            </g>
+                                        </svg>
 
-							</div>
+                                    </div>
 
-						</div>
+                                    <div class="header-nav__text">Стратегия</div>
 
-					</div>
+                                </a>
 
-				</div>
+                            </li>
 
-			</main>
+                            <li class="header-nav__item">
 
-		</div>
+                                <a href="/#instruments-section" class="header-nav__link"
+                                    data-target="#instruments-section">
 
-	</div>
-	
-	<div class="popup" id="delete-popup" >
+                                    <div class="header-nav__icon">
 
-		<div class="popup__inner">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35.654px"
+                                            height="27.855px" viewBox="0 0 35.654 27.855"
+                                            enable-background="new 0 0 35.654 27.855" xml:space="preserve">
+                                            <g>
+                                                <defs>
+                                                    <rect id="SVGID_1_" width="35.655" height="27.855" />
+                                                </defs>
+                                                <clipPath id="SVGID_2_">
+                                                    <use xlink:href="#SVGID_1_" overflow="visible" />
+                                                </clipPath>
+                                                <polygon fill="none" stroke="#000000" stroke-width="2"
+                                                    stroke-miterlimit="10" points="17.827,1.855 
+                                                                1.827,26.855 33.827,26.855 	" />
+                                            </g>
+                                        </svg>
 
-			<div class="popup__title">Are you sure you want to delete recepe?</div>
+                                    </div>
 
-			<div class="popup__buttons">
+                                    <div class="header-nav__text">Технологии</div>
 
-				<button class="button button--1 js-close-popup">Yes</button>
+                                </a>
 
-				<button class="button button--3 js-close-popup">No</button>
+                            </li>
 
-			</div>
+                        </ul>
 
-		</div>
+                    </div>
 
-	</div>
+                    <nav class="nav">
 
-	<script src="js/scripts.min.js"></script>
+                        <img src="img/icons/nav-circle.png" class="nav__circle" alt="">
+
+                        <div class="container nav__container">
+
+                            <div class="row">
+
+                                <div class="offset-lg-1 col-lg-7">
+
+                                    <ul class="nav-list">
+
+                                        <li class="nav-list__item">
+
+                                            <a href="/#digital-section" class="nav-list__link"
+                                                data-target="#digital-section">Цифровые
+                                                решения</a>
+
+                                        </li>
+
+                                        <li class="nav-list__item">
+
+                                            <a href="/#directions-section" class="nav-list__link"
+                                                data-target="#directions-section">Направления</a>
+
+                                        </li>
+
+                                        <li class="nav-list__item">
+
+                                            <a href="/#instruments-section" class="nav-list__link"
+                                                data-target="#instruments-section">Инструменты</a>
+
+                                        </li>
+
+                                        <li class="nav-list__item">
+
+                                            <a href="/#projects-section" class="nav-list__link"
+                                                data-target="#projects-section">Проектный
+                                                портфель</a>
+
+                                        </li>
+
+                                        <li class="nav-list__item">
+
+                                            <a href="agency.html" class="nav-list__link">Агентство</a>
+
+                                        </li>
+
+                                        <li class="nav-list__item">
+
+                                            <a href="javascript:void(0)" class="nav-list__link">Новости</a>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="col-lg-4 nav-aside">
+
+                                    <ul class="nav-contacts">
+
+                                        <li class="nav-contacts__item">
+
+                                            <a href="tel:+7(923)43243235" class="nav-contacts__link">
+
+                                                <span class="nav-contacts__icon-wrapper">
+
+                                                    <img src="img/icons/nav-phone.png" class="nav-contacts__icon"
+                                                        alt="">
+
+                                                </span>
+
+                                                <span>+7 (923) 432 432 35</span>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li class="nav-contacts__item">
+
+                                            <a href="mailto:ask@agency.ru" class="nav-contacts__link">
+
+                                                <span class="nav-contacts__icon-wrapper">
+
+                                                    <img src="img/icons/nav-email.png" class="nav-contacts__icon"
+                                                        alt="">
+
+                                                </span>
+
+                                                <span>ask@agency.ru</span>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li class="nav-contacts__item">
+
+                                            <div class="nav-contacts__link">
+
+                                                <span class="nav-contacts__icon-wrapper">
+
+                                                    <img src="img/icons/nav-marker.png" class="nav-contacts__icon"
+                                                        alt="">
+
+                                                </span>
+
+                                                <span>Москва, пер. Водянковский, 24</span>
+
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="nav-social">
+
+                                        <li class="nav-social__item">
+
+                                            <a href="" class="nav-social__link">
+
+                                                <img src="img/icons/nav-fb.png" alt="">
+
+                                            </a>
+
+                                        </li>
+
+                                        <li class="nav-social__item">
+
+                                            <a href="" class="nav-social__link">
+
+                                                <img src="img/icons/nav-twitter.png" alt="">
+
+                                            </a>
+
+                                        </li>
+
+                                        <li class="nav-social__item">
+
+                                            <a href="" class="nav-social__link">
+
+                                                <img src="img/icons/nav-vk.png" alt="">
+
+                                            </a>
+
+                                        </li>
+
+                                        <li class="nav-social__item">
+
+                                            <a href="" class="nav-social__link">
+
+                                                <img src="img/icons/nav-insta.png" alt="">
+
+                                            </a>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row nav__polygon">
+
+                                <div class="offset-lg-7 col-lg-5">
+
+                                    <img src="img/icons/nav-polygon.png" alt="">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </nav>
+
+                    <div class="header__controls">
+
+                        <div class="header__phone js-show-popup">
+
+                            <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px"
+                                viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                                <g>
+                                    <circle fill="#00383C" cx="24.969" cy="24.969" r="24.969" />
+                                    <path fill="#FFFFFF"
+                                        d="M31.153,25.03c-2.258,0-4.248,1.326-5.153,3.298c-2.132-1.085-3.87-2.822-4.955-4.954
+                                                        c1.972-0.906,3.299-2.896,3.299-5.154c0-3.129-2.546-5.675-5.675-5.675s-5.675,2.546-5.675,5.675
+                                                        c0,10.013,8.146,18.159,18.159,18.159c3.129,0,5.675-2.545,5.675-5.674S34.282,25.03,31.153,25.03z M31.153,34.109
+                                                        c-8.762,0-15.89-7.128-15.89-15.889c0-1.878,1.527-3.405,3.405-3.405s3.405,1.527,3.405,3.405c0,1.643-1.17,3.049-2.78,3.344
+                                                        l-1.342,0.246l0.485,1.275c1.378,3.611,4.239,6.473,7.852,7.852l1.275,0.486l0.245-1.344c0.295-1.61,1.701-2.779,3.344-2.779
+                                                        c1.878,0,3.405,1.527,3.405,3.405C34.559,32.582,33.031,34.109,31.153,34.109z" />
+                                </g>
+                            </svg>
+
+                        </div>
+
+                        <div class="burger">
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <main class="index">
+
+                <section class="index-hero js-section" id="index-hero">
+
+                    <img src="img/icons/inder-hero-circle.png" class="index-hero__circle scene" data-modifier="30"
+                        alt="">
+
+                    <div class="container index-hero__triangle-wrapper">
+
+                        <img src="img/icons/inder-hero-triangle.png" class="index-hero__triangle scene"
+                            data-modifier="30" alt="">
+
+                    </div>
+
+                    <img src="img/icons/index-hero-rectangle.png" class="index-hero__rectangle scene" data-modifier="20"
+                        alt="">
+
+                    <div class="container index-hero__container">
+
+                        <div class="index-hero__inner">
+
+                            <img src="img/icons/index-hero-inner-circle.png" class="index-hero__inner-circle scene"
+                                data-modifier="20" alt="">
+
+                            <img src="img/icons/inder-hero-inner-triangle.png" class="index-hero__inner-triangle scene"
+                                data-modifier="20" alt="">
+
+                            <img src="img/icons/inder-hero-innder-rectangle.png"
+                                class="index-hero__inner-rectangle scene" data-modifier="20" alt="">
+
+                            <div class="index-hero__title">Центр цифровых компетенций для решения задач государства
+                            </div>
+
+                            <div class="index-hero__buttons">
+
+                                <a href="agency.html" class="button button--1 index-hero__button">Об
+                                    агентстве</a>
+
+                                <a href="javascript:void(0)" class="button button--2 index-hero__button">скачать
+                                    презентацию</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="advantages js-section" id="advantages">
+
+                    <div class="container advantages__container">
+
+                        <div class="row">
+
+                            <div class="col-sm-6 col-lg-3 advantages-item-wrapper" data-aos="fade-up"
+                                data-aos-delay="200">
+
+                                <div class="advantages-item">
+
+                                    <img src="img/icons/advantages-1.svg" class="advantages-item__icon" alt="">
+
+                                    <div class="advantages-item__title">Экспертиза в области ИТ</div>
+
+                                    <div class="advantages-item__text">От 15 лет — опыт работы в российских и
+                                        зарубежных ИТ-компаниях у экспертов агентства</div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6 col-lg-3 advantages-item-wrapper" data-aos="fade-up"
+                                data-aos-delay="400">
+
+                                <div class="advantages-item">
+
+                                    <img src="img/icons/advantages-2.svg" class="advantages-item__icon" alt="">
+
+                                    <div class="advantages-item__title">9 лет практики в госсекторе</div>
+
+                                    <div class="advantages-item__text">9 лет практики разработки ИТ-решений для
+                                        государственных заказчиков</div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6 col-lg-3 advantages-item-wrapper" data-aos="fade-up"
+                                data-aos-delay="600">
+
+                                <div class="advantages-item">
+
+                                    <img src="img/icons/advantages-3.svg" class="advantages-item__icon" alt="">
+
+                                    <div class="advantages-item__title">20 федеральных проектов</div>
+
+                                    <div class="advantages-item__text">Свыше 20 федеральных информационных систем
+                                        создано при участии экспертов агентства</div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6 col-lg-3 advantages-item-wrapper" data-aos="fade-up"
+                                data-aos-delay="800">
+
+                                <div class="advantages-item">
+
+                                    <img src="img/icons/advantages-4.svg" class="advantages-item__icon" alt="">
+
+                                    <div class="advantages-item__title">Ключевые компетенции</div>
+
+                                    <div class="advantages-item__text">Ключевые компетенции в областях образования и
+                                        цифровой экономики</div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="digital js-section" id="digital-section">
+
+                    <div class="digital__top">
+
+                        <div class="digital__title" data-aos="fade-up">Цифровые решения</div>
+
+                        <div class="digital__descr" data-aos="fade-up">Для проведения цифровой трансформации и
+                            достижения
+                            целевых показателей национальных программ и проектов</div>
+
+                    </div>
+
+                    <div class="digital-tabs">
+
+                        <ul class="container digital-tabs-list" id="digital-slider" >
+
+                            <li class="js-tabs-button digital-tabs-list__item is-active"
+                                data-target=".digital-tabs-content__partial--1">
+
+                                <img src="img/icons/federal.png" class="digital-tabs-list__icon" alt="">
+
+                                <div class="digital-tabs-list__title">Национальный программа «Цифровая экономика РФ»
+                                </div>
+
+                            </li>
+
+                            <li class="js-tabs-button digital-tabs-list__item"
+                                data-target=".digital-tabs-content__partial--2">
+
+                                <img src="img/icons/federal.png" class="digital-tabs-list__icon" alt="">
+
+                                <div class="digital-tabs-list__title">Национальный проект «Образование»</div>
+
+                            </li>
+
+                        </ul>
+
+                        <div class="slider-controls instruments__slider-controls js-slider-controls digital-tabs__controls">
+
+                            <div class="slider-control" id="js-digital-prev">
+
+                                <img src="img/icons/slider-control-prev.png" alt="">
+
+                            </div>
+
+                            <div class="slider-control" id="js-digital-next">
+
+                                <img src="img/icons/slider-control-next.png" alt="">
+
+                            </div>
+
+                        </div>
+
+                        <div class="digital-tabs-content" data-aos="fade-in">
+
+                            <div class="digital-tabs-content__partial digital-tabs-content__partial--1 is-active">
+
+                                <div class="container digital-items">
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-1.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Современная школа</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-2.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Успех каждого ребенка</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-3.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Поддержка семей, имеющих детей</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-4.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Цифровая среда</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-5.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Молодые профессионалы</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-6.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Социальная активность</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                </div>
+
+                                <div class="button-wrapper button-wrapper--center">
+
+                                    <a href="javascript:void(0)" class="button button--2 digital__btn"
+                                        data-aos="fade-up">скачать
+                                        паспорт</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="digital-tabs-content__partial digital-tabs-content__partial--2">
+
+                                <div class="container digital-items">
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-1.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Современная школа</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-2.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Успех каждого ребенка</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-3.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Поддержка семей, имеющих детей</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-4.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Цифровая среда</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-5.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Молодые профессионалы</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                    <a href="solution.html" class="digital-item">
+
+                                        <div class="digital-item__col digital-item__col--first">
+
+                                            <img src="img/digital/digital-6.png" class="digital-item__icon" alt="">
+
+                                        </div>
+
+                                        <div class="digital-item__col digital-item__col--last">
+
+                                            <div class="digital-item__title">Социальная активность</div>
+
+                                            <div class="digital-item__controls-panel">
+
+                                                <span>Смотреть решения</span>
+
+                                                <img src="img/icons/arrow.png" alt="">
+
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+
+                                </div>
+
+                                <div class="button-wrapper button-wrapper--center">
+
+                                    <a href="javascript:void(0)" class="button button--2 digital__btn"
+                                        data-aos="fade-up">скачать
+                                        паспорт</a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="directions js-section" id="directions-section">
+
+                    <div class="container">
+
+                        <div class="directions__title" data-aos="fade-up">Направления</div>
+
+                        <div class="row masonry-items" data-aos="fade-in">
+
+                            <div class="masonry-item easeBox" data-timing="quintOut" data-to="-40">
+
+                                <a href="javascript:void(0)" class="directions-item">
+
+                                    <div class="directions-item__icon-block">
+
+                                        <img src="img/icons/directions-1.png" alt="">
+
+                                    </div>
+
+                                    <div class="directions-item__title">Проектный офис / внешний монитор</div>
+
+                                    <div class="directions-item-more">
+
+                                        <span class="directions-item-more__text">Подробнее</span>
+
+                                        <div class="directions-item-more__arrow"></div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="masonry-item easeBox" data-timing="quintOut" data-to="-80">
+
+                                <a href="javascript:void(0)" class="directions-item">
+
+                                    <div class="directions-item__icon-block">
+
+                                        <img src="img/icons/directions-2.png" alt="">
+
+                                    </div>
+
+                                    <div class="directions-item__title">Аудит и мониторинг ведомственной цифровой среды
+                                    </div>
+
+                                    <div class="directions-item-more">
+
+                                        <span class="directions-item-more__text">Подробнее</span>
+
+                                        <div class="directions-item-more__arrow"></div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="masonry-item easeBox" data-timing="quintOut" data-to="-120">
+
+                                <a href="javascript:void(0)" class="directions-item">
+
+                                    <div class="directions-item__icon-block">
+
+                                        <img src="img/icons/directions-3.png" alt="">
+
+                                    </div>
+
+                                    <div class="directions-item__title">Документирование и контроль реализации проектов
+                                        и работ</div>
+
+                                    <div class="directions-item-more">
+
+                                        <span class="directions-item-more__text">Подробнее</span>
+
+                                        <div class="directions-item-more__arrow"></div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="masonry-item">
+
+                                <a href="javascript:void(0)" class="directions-item">
+
+                                    <div class="directions-item__icon-block">
+
+                                        <img src="img/icons/directions-4.png" alt="">
+
+                                    </div>
+
+                                    <div class="directions-item__title">Аудит отчетной
+                                        документации и
+                                        качественных материалов</div>
+
+                                    <div class="directions-item-more">
+
+                                        <span class="directions-item-more__text">Подробнее</span>
+
+                                        <div class="directions-item-more__arrow"></div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="masonry-item easeBox" data-timing="quintOut" data-to="-40">
+
+                                <a href="javascript:void(0)" class="directions-item">
+
+                                    <div class="directions-item__icon-block">
+
+                                        <img src="img/icons/directions-5.png" alt="">
+
+                                    </div>
+
+                                    <div class="directions-item__title">Разработка, поддержка
+                                        и развитие ПО. Внедрение
+                                        и подбор кадров</div>
+
+                                    <div class="directions-item-more">
+
+                                        <span class="directions-item-more__text">Подробнее</span>
+
+                                        <div class="directions-item-more__arrow"></div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="masonry-item easeBox" data-timing="quintOut" data-to="-80">
+
+                                <a href="javascript:void(0)" class="directions-item">
+
+                                    <div class="directions-item__icon-block">
+
+                                        <img src="img/icons/directions-6.png" alt="">
+
+                                    </div>
+
+                                    <div class="directions-item__title">Цифровой маркетинг</div>
+
+                                    <div class="directions-item-more">
+
+                                        <span class="directions-item-more__text">Подробнее</span>
+
+                                        <div class="directions-item-more__arrow"></div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="instruments js-section" id="instruments-section">
+
+                    <div class="container">
+
+                        <div class="instruments__title" data-aos="fade-up">Инструменты</div>
+
+                        <div class="row instruments__row">
+
+                            <div class="offset-lg-1 col-lg-4" data-aos="fade-up">
+
+                                <img src="img/instruments/instruments-phone.png" alt="">
+
+                            </div>
+
+                            <div class="offset-lg-1 col-lg-6 instruments-slider-wrapper" data-aos="fade-in">
+
+                                <div class="instruments-slider" id="js-instruments-slider">
+
+                                    <div class="instruments-slider__partial">
+
+                                        <div class="instruments-slider__item instruments-slider__item--1">
+
+                                            <img src="img/icons/instrument1.svg" alt="">
+
+                                            <div class="instruments-slider__title">Лучшие практики</div>
+
+                                        </div>
+
+                                        <div class="instruments-slider__item instruments-slider__item--2">
+
+                                            <img src="img/icons/instrument2.svg" alt="">
+
+                                            <div class="instruments-slider__title">Подбор решений и технологий</div>
+
+                                        </div>
+
+                                        <div class="instruments-slider__item instruments-slider__item--3">
+
+                                            <img src="img/icons/instrument3.svg" alt="">
+
+                                            <div class="instruments-slider__title">Интеграции и обмен данными</div>
+
+                                        </div>
+
+                                        <div class="instruments-slider__item instruments-slider__item--4">
+
+                                            <img src="img/icons/instrument4.svg" alt="">
+
+                                            <div class="instruments-slider__title">Электронные образовательные ресурсы
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="instruments-slider__partial">
+
+                                        <div class="instruments-slider__item instruments-slider__item--5">
+
+                                            <img src="img/icons/instrument5.svg" alt="">
+
+                                            <div class="instruments-slider__title">Обследование, интервью, UX / UI
+                                                анализ
+                                            </div>
+
+                                        </div>
+
+                                        <div class="instruments-slider__item instruments-slider__item--6">
+
+                                            <img src="img/icons/instrument6.svg" alt="">
+
+                                            <div class="instruments-slider__title">Разработка и тестирование прототипов
+                                            </div>
+
+                                        </div>
+
+                                        <div class="instruments-slider__item instruments-slider__item--7">
+
+                                            <img src="img/icons/instrument7.svg" alt="">
+
+                                            <div class="instruments-slider__title">Концепции и дорожные карты</div>
+
+                                        </div>
+
+                                        <div class="instruments-slider__item instruments-slider__item--8">
+
+                                            <img src="img/icons/instrument8.svg" alt="">
+
+                                            <div class="instruments-slider__title">Цифровые продукты</div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="slider-controls instruments__slider-controls js-slider-controls">
+
+                                    <div class="slider-control" id="js-instruments-prev">
+
+                                        <img src="img/icons/slider-control-prev.png" alt="">
+
+                                    </div>
+
+                                    <div class="slider-control" id="js-instruments-next">
+
+                                        <img src="img/icons/slider-control-next.png" alt="">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="projects js-section" id="projects-section">
+
+                    <div class="projects__title" data-aos="fade-up">Проектный портфель</div>
+
+                    <div class="container projects__items-wrapper" data-aos="fade-in">
+
+                        <div class="row masonry-items data-tilt">
+
+                            <div class="projects-item-wrapper masonry-item" data-tilt>
+
+                                <a href="project.html" class="projects-item projects-item--type-1">
+
+                                    <div class="projects-item__block">
+
+                                        <div class="projects-item__title">Обеспецение взаимодействия школьных библиотек
+                                            и федеральных хранилищ мониторинг организаций</div>
+
+                                        <div class="projects-item__bottom-panel">
+
+                                            <img src="img/icons/project-emblem.png" class="projects-item__icon" alt="">
+
+                                            <span>Министерство просвещения РФ</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="projects-item-wrapper masonry-item" data-tilt>
+
+                                <a href="project.html" class="projects-item projects-item--type-2">
+
+                                    <div class="projects-item__bg"
+                                        style="background-image: url('img/projects/project-1.jpg');"></div>
+
+                                    <div class="projects-item__block">
+
+                                        <div class="projects-item__title">Государственный мониторинг общеобразовательных
+                                            организаций</div>
+
+                                        <div class="projects-item__bottom-panel">
+
+                                            <img src="img/icons/project-emblem.png" class="projects-item__icon" alt="">
+
+                                            <span>Министерство просвещения РФ</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="projects-item-wrapper masonry-item" data-tilt>
+
+                                <a href="project.html" class="projects-item projects-item--type-3">
+
+                                    <div class="projects-item__block">
+
+                                        <div class="projects-item__title">Обеспецение взаимодействия школьных библиотек
+                                            и федеральных хранилищ</div>
+
+                                        <div class="projects-item__bottom-panel">
+
+                                            <img src="img/icons/project-emblem.png" class="projects-item__icon" alt="">
+
+                                            <span>Министерство просвещения РФ</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="projects-item-wrapper masonry-item" data-tilt>
+
+                                <a href="project.html" class="projects-item projects-item--type-4">
+
+                                    <div class="projects-item__bg"
+                                        style="background-image: url('img/projects/project-1.jpg');"></div>
+
+                                    <div class="projects-item__block">
+
+                                        <div class="projects-item__title">Мониторинг общеобразовательных организаций
+                                        </div>
+
+                                        <div class="projects-item__bottom-panel">
+
+                                            <img src="img/icons/project-emblem.png" class="projects-item__icon" alt="">
+
+                                            <span>Министерство просвещения РФ</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="projects-item-wrapper masonry-item" data-tilt>
+
+                                <a href="project.html" class="projects-item projects-item--type-5">
+
+                                    <div class="projects-item__block">
+
+                                        <div class="projects-item__title">Открытая информационно-образовательнгая среда
+                                            «Российская электронная школа» и база данных уроков. Государственный
+                                            мониторинг
+                                            общеобразовательных организаций</div>
+
+                                        <div class="projects-item__bottom-panel">
+
+                                            <img src="img/icons/project-emblem.png" class="projects-item__icon" alt="">
+
+                                            <span>Министерство просвещения РФ</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <div class="projects-item-wrapper masonry-item" data-tilt>
+
+                                <a href="project.html" class="projects-item projects-item--type-6">
+
+                                    <div class="projects-item__block">
+
+                                        <div class="projects-item__title">Обеспецение взаимодействия школьных библиотек
+                                            и федеральных хранилищ. Обеспецение взаимодействия школьных библиотек</div>
+
+                                        <div class="projects-item__bottom-panel">
+
+                                            <img src="img/icons/project-emblem.png" class="projects-item__icon" alt="">
+
+                                            <span>Министерство просвещения РФ</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="button-wrapper button-wrapper--center">
+
+                        <div class="button button--2 projects__button" id="moreProjectsBtn" data-aos="fade-up">Еще
+                            проекты</div>
+
+                    </div>
+
+                </section>
+
+                <section class="index-news js-section" id="news-section">
+
+                    <div class="index-news__title" data-aos="fade-up">Новости</div>
+
+                    <div class="container index-news__container" data-aos="fade-in">
+
+                        <div class="row">
+
+                            <div class="col-lg-4 news-item-wrapper">
+
+                                <div class="news-item">
+
+                                    <div class="news-item__date">14 января 2019</div>
+
+                                    <a href="javascript:void(0)" class="news-item__title">О решении по итогам
+                                        совещения о применении отечественного телекоммуникационного оборудования при
+                                        реализации мероприятий национальной программы и национального проекта «Цифровая
+                                        экономика»</a>
+
+                                    <div class="news-item__bottom-panel">
+
+                                        <div class="news-item__control">
+
+                                            <img src="img/icons/flag.svg" alt="">
+
+                                        </div>
+
+                                        <span>Национальная программа «Цифровая экономика РФ»</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-4 news-item-wrapper">
+
+                                <div class="news-item">
+
+                                    <div class="news-item__date">14 января 2019</div>
+
+                                    <a href="javascript:void(0)" class="news-item__title">Доклад Константина Носкова
+                                        на заседании президиума Совета при Президенте Российской Федерации по
+                                        стратегическому развитию и национальным проектам</a>
+
+                                    <div class="news-item__bottom-panel">
+
+                                        <div class="news-item__control">
+
+                                            <img src="img/icons/flag.svg" alt="">
+
+                                        </div>
+
+                                        <span>Национальная программа «Цифровая экономика РФ»</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-4 news-item-wrapper">
+
+                                <div class="news-item">
+
+                                    <div class="news-item__date">14 января 2019</div>
+
+                                    <a href="javascript:void(0)" class="news-item__title">О решении по итогам
+                                        совещения о применении отечественного телекоммуникационного оборудования при
+                                        реализации мероприятий национальной программы и национального проекта
+                                    </a>
+
+                                    <div class="news-item__bottom-panel">
+
+                                        <div class="news-item__control">
+
+                                            <img src="img/icons/flag.svg" alt="">
+
+                                        </div>
+
+                                        <span>Национальная программа «Цифровая экономика РФ»</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="button-wrapper button-wrapper--center">
+
+                        <div class="button button--2 index-news__button" data-aos="fade-up">Все новости</div>
+
+                    </div>
+
+                </section>
+
+                <section class="contact-section js-section" id="contact-section">
+
+                    <div class="container contact-section__bg">
+
+                        <img src="img/icons/contact-triangle.png" class="contact-section__triangle rotateBox" alt="">
+
+                        <img src="img/icons/contact-circle.png" class="contact-section__circle contact-section-figure"
+                            data-modifier="5" alt="">
+
+                        <img src="img/icons/contact-rectangle.png"
+                            class="contact-section__rectangle contact-section-figure" data-modifier="20" alt="">
+
+                    </div>
+
+                    <div class="contact-section__title" data-aos="fade-up">Давайте обсудим вашу задачу</div>
+
+                    <div class="button-wrapper button-wrapper--center">
+
+                        <div class="button button--3 js-show-popup contact-section__button" data-aos="fade-up">
+                            перезвоните мне</div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+        <footer class="footer js-section" id="footer">
+
+            <div class="footer-top">
+
+                <div class="container footer-top__container">
+
+                    <div class="row footer-top__row">
+
+                        <div class="col-lg-3 footer-top__item-wrapper">
+
+                            <a href="tel:+792343243235" class="footer-top__item footer-top__item--phone">
+
+                                <img src="img/icons/footer-phone.svg" class="footer-top__icon" alt="">
+
+                                <span>+7 (923) 432 432 35</span>
+
+                            </a>
+
+                        </div>
+
+                        <div class="col-lg-3 footer-top__item-wrapper">
+
+                            <a href="mailto:ask@agency.ru" class="footer-top__item footer-top__item--email">
+
+                                <img src="img/icons/footer-email.svg" class="footer-top__icon" alt="">
+
+                                <span>ask@agency.ru</span>
+
+                            </a>
+
+                        </div>
+
+                        <div class="col-lg-6 footer-top__item-wrapper">
+
+                            <div class="footer-top__item footer-top__item--address">
+
+                                <img src="img/icons/footer-address.svg" class="footer-top__icon" alt="">
+
+                                <span>Москва, пер. Водянковский, 24</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-middle">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-3 footer-block-wrapper">
+
+                            <div class="footer-block">
+
+                                <div class="footer-block__title">Цифровые решения</div>
+
+                                <ul class="footer-block__list">
+
+                                    <li>
+
+                                        <a href="">Современная школа</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Успех каждого ребенка</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Поддержка семей, имеющих детей</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Цифровая образовательная среда</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Молодые профессионалы</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Социальная активность</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Социальные лифты для каждого</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Новые возможности для каждого</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Учитель будущего</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3 footer-block-wrapper">
+
+                            <div class="footer-block">
+
+                                <div class="footer-block__title">Направления</div>
+
+                                <ul class="footer-block__list">
+
+                                    <li>
+
+                                        <a href="">Проектный офис / внешний монитор</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Аудит и мониторинг ведомственной цифровой среды</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Документирование и контроль реализации проектов и работ</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Аудит отчетной документации и качественных материалов</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Разработка, поддержка и развитие ПО. Внедрение и подбор кадров</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Цифровой маркетинг</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3 footer-block-wrapper">
+
+                            <div class="footer-block">
+
+                                <div class="footer-block__title">Проектный портфель</div>
+
+                                <ul class="footer-block__list">
+
+                                    <li>
+
+                                        <a href="">Обеспечение взаимодействия школьных библиотек и федеральных
+                                            хранилищ</a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="">Государственный мониторинг общеобразовательных организаций</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <div class="offset-lg-1 col-lg-2 footer-block-wrapper">
+
+                            <div class="footer-block">
+
+                                <a href="" class="footer-block__title">Агентство</a>
+
+                                <a href="" class="footer-block__title">Новости</a>
+
+                                <a href="" class="footer-block__title">Контакты</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <div class="container">
+
+                    <div class="row footer-bottom__row">
+
+                        <div class="col-lg-3">
+
+                            <a href="/" class="footer__logo">
+
+                                <img src="img/icons/footer-logo.png" alt="">
+
+                            </a>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="footer__copyright">© 2019 Агентство цифровой трансформации</div>
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <ul class="footer-social">
+
+                                <li class="footer-social__item footer-social__item--fb">
+
+                                    <a href="">
+
+                                        <img src="img/icons/footer-fb.svg" alt="">
+
+                                    </a>
+
+                                </li>
+
+                                <li class="footer-social__item footer-social__item--twitter">
+
+                                    <a href="">
+
+                                        <img src="img/icons/footer-twitter.svg" alt="">
+
+                                    </a>
+
+                                </li>
+
+                                <li class="footer-social__item footer-social__item--vk">
+
+                                    <a href="">
+
+                                        <img src="img/icons/footer-vk.svg" alt="">
+
+                                    </a>
+
+                                </li>
+
+                                <li class="footer-social__item footer-social__item--instagram">
+
+                                    <a href="">
+
+                                        <img src="img/icons/footer-instagram.svg" alt="">
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <div class="popup" id="popup">
+
+        <img src="img/icons/popup-circle.png" class="popup__circle" alt="">
+
+        <div class="popup__close js-popup-close">
+
+            <img src="img/icons/close-icon.svg" alt="">
+
+        </div>
+
+        <div class="popup__inner">
+
+            <div class="popup__title">Свяжитесь со мной</div>
+
+            <form action="" class="popup__form">
+
+                <input type="text" class="popup__field" name="name" placeholder="Имя" autocomplete="off">
+
+                <input type="text" class="popup__field" name="phone" placeholder="Телефон" autocomplete="off">
+
+                <input type="text" class="popup__field popup__field--last" name="email" placeholder="Email"
+                    autocomplete="off">
+
+                <label class="popup-agreement">
+
+                    <input type="checkbox" class="popup-agreement__input">
+
+                    <span class="popup-agreement__checkbox">
+
+                        <img src="img/icons/check.png" alt="">
+
+                    </span>
+
+                    <span class="popup-agreement__text">Я согласен с обработкой персональных данных</span>
+
+                </label>
+
+                <button class="button button--2 popup__button">Отправить</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="navigator">
+
+        <div class="navigator__control navigator__control--prev">
+
+            <img src="img/icons/navigator-prev.png" alt="">
+
+        </div>
+
+        <ul class="navigator-list">
+
+            <li class="navigator-list__item is-active" data-target="#digital-section">
+
+                <div class="navigator-list__dot"></div>
+
+                <div class="navigator-list__tooltip">Цифровые решения</div>
+
+            </li>
+
+            <li class="navigator-list__item" data-target="#directions-section">
+
+                <div class="navigator-list__dot"></div>
+
+                <div class="navigator-list__tooltip">Направления</div>
+
+            </li>
+
+            <li class="navigator-list__item" data-target="#instruments-section">
+
+                <div class="navigator-list__dot"></div>
+
+                <div class="navigator-list__tooltip">Инструменты</div>
+
+            </li>
+
+            <li class="navigator-list__item" data-target="#projects-section">
+
+                <div class="navigator-list__dot"></div>
+
+                <div class="navigator-list__tooltip">Проектный портфель</div>
+
+            </li>
+
+            <li class="navigator-list__item" data-target="#news-section">
+
+                <div class="navigator-list__dot"></div>
+
+                <div class="navigator-list__tooltip">Новости</div>
+
+            </li>
+
+            <li class="navigator-list__item" data-target="#contact-section">
+
+                <div class="navigator-list__dot"></div>
+
+                <div class="navigator-list__tooltip">Контакты</div>
+
+            </li>
+
+        </ul>
+
+        <div class="navigator__control navigator__control--next">
+
+            <img src="img/icons/navigator-next.png" alt="">
+
+        </div>
+
+    </div>
+
+    <script src="js/scripts.min.js"></script>
 
 </body>
 

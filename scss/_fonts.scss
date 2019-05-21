@@ -1,4 +1,5 @@
 @import "_mixins/font-face";
 
-@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("FuturaPT-Light", "../fonts/FuturaPT-Light/FuturaPT-Light");
+@include font-face("FuturaPT-Book", "../fonts/FuturaPT-Book/FuturaPT-Book");
+@include font-face("FuturaPT-Demi", "../fonts/FuturaPT-Demi/FuturaPT-Demi");
