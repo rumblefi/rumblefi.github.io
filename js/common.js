@@ -43,6 +43,10 @@ $(function () {
 
 	setContentWidth()
 
+	function checkInitiallyLandscape() {
+		return window.innerWidth >  window.innerHeight
+	}
+
 	$('window').on('resize', setContentWidth)
 
 	function setPaddintTopForBody() {
@@ -642,7 +646,7 @@ $(function () {
 
 	}
 
-	digitalMobileSlider()
+	digitalMobileSlider(checkInitiallyLandscape())
 
 	function getWindowWidthAsync(cb) {
 		setTimeout(() => {
