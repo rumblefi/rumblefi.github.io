@@ -36,12 +36,11 @@ $(function () {
 		PAGE_CONTENT.css('width', getWindowWidth)
 	}
 
-	function setContentWidthAsync(windowWidth) {
-		PAGE_INNER.css('width', windowWidth)
-		PAGE_CONTENT.css('width', windowWidth)
-	}
+	// function setContentWidthAsync(windowWidth) {
+	// 	PAGE_INNER.css('width', windowWidth)
+	// 	PAGE_CONTENT.css('width', windowWidth)
+	// }
 
-	setContentWidth()
 
 	function checkInitiallyLandscape() {
 		return window.innerWidth >  window.innerHeight
@@ -660,14 +659,8 @@ $(function () {
 		} = screen.orientation
 		if (angle !== 0) { //landscape
 			digitalMobileSlider(true) //landscape
-			getWindowWidthAsync((windowWidth) => {
-				setContentWidthAsync(windowWidth)
-			})
 		} else {
 			digitalMobileSlider(false)
-			getWindowWidthAsync((windowWidth) => {
-				setContentWidthAsync(windowWidth)
-			})
 		}
 	});
 
