@@ -637,5 +637,19 @@ $(function () {
 		}
 	});
 
+	function customVanillaTilt() {
+		const elements = document.querySelectorAll("[data-tilt]");
+
+		if ($(window).width() < 992) {
+			elements.forEach(element => {
+				element.vanillaTilt.destroy();
+			});
+		}
+
+	}
+
+	customVanillaTilt()
+
+
 
 });
