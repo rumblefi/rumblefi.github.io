@@ -198,6 +198,7 @@ $(function () {
 	$('.glossary-letters__item').on('click', function () {
 		const that = $(this)
 		that.addClass('is-active').siblings().removeClass('is-active')
+		$(".glossary__output").fadeOut(200).fadeIn(200)
 	});
 
 	$('.js-drop-toggler').on('click', function () {
@@ -540,8 +541,8 @@ $(function () {
 					if (!$carousel.hasClass('slick-initialized')) {
 						$carousel.slick({
 							arrows: false,
-							slidesToShow: 10,
-							slidesToScroll: 10
+							slidesToShow: 7,
+							slidesToScroll: 7
 						});
 					}
 				}
@@ -662,5 +663,49 @@ $(function () {
 	}
 
 	customVanillaTilt()
+
+	function filtersMobileSlider() {
+
+		$('#filtersMobileSlider').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+			//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+			const index = (currentSlide ? currentSlide : 0);
+			const slider1 = $("#dates-slider")
+			const slider2 = $('#js-glossary-letters')
+			$('.js-tab-item').eq(index).addClass('is-active').siblings().removeClass('is-active')
+
+			if (index === 1) {
+				slider1.slick('setPosition');
+			}
+
+			if (index === 2) {
+				slider2.slick('setPosition');
+			}
+
+		});
+
+		/* Slick needs no get Reinitialized on window Resize after it was destroyed */
+		$(window).on('load resize orientationchange', function () {
+			$('#filtersMobileSlider').each(function () {
+				var $carousel = $(this);
+				if ($(window).width() > 992) {
+					if ($carousel.hasClass('slick-initialized')) {
+						$carousel.slick('unslick');
+					}
+				} else {
+					if (!$carousel.hasClass('slick-initialized')) {
+						$carousel.slick({
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							mobileFirst: true,
+							arrows: false
+						});
+					}
+				}
+			});
+		});
+
+	}
+
+	filtersMobileSlider()
 
 });
