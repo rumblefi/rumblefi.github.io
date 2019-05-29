@@ -4762,6 +4762,34 @@ span.select2-selection.select2-selection--single {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		.slick-list{
+
+			@media (min-width: 992px) {
+				width: 100%;
+			}
+
+		}
+
+		.slick-track{
+
+			@media (min-width: 992px) {
+				display: flex !important;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			&::before,
+			&::after{
+
+				@media (min-width: 992px) {
+					display: none !important;
+				}
+
+			}
+
+		}
+
 	}
 
 }
@@ -4783,10 +4811,28 @@ span.select2-selection.select2-selection--single {
 	text-transform: uppercase;
 	letter-spacing: 0.01em;
 
-	&:hover,
-	&.is-active,
-	&.slick-current {
+	@media (min-width: 992px) {
+		width: auto !important;
+	}
+
+	&:hover{
 		background-color: #EAE73F;
+	}
+
+	&.is-active{
+
+		@media (min-width: 992px) {
+			background-color: #EAE73F;
+		}	
+
+	}
+
+	&.slick-current{
+
+		@include md() {
+			background-color: #EAE73F;
+		}
+
 	}
 
 }
