@@ -1,11 +1,14 @@
 $(function () {
 
-	AOS.init({
-		disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-		duration: 600, // values from 0 to 3000, with step 50ms
-		once: true, // whether animation should happen only once - while scrolling down
-		offset: 0 // offset (in px) from the original trigger point
-	});
+
+	setTimeout(() => {
+		AOS.init({
+			disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+			duration: 600, // values from 0 to 3000, with step 50ms
+			once: true, // whether animation should happen only once - while scrolling down
+			offset: 0, // offset (in px) from the original trigger point
+		})
+	}, 1);
 
 	const HEADER = $(".header")
 	const HEADER_HEIGHT = getHeaderHeight()
@@ -61,15 +64,16 @@ $(function () {
 	// работа с Masonry
 	function customMasonry(selector) {
 
-		$(selector).masonry({
-			itemSelector: '.masonry-item',
-			horizontalOrder: true
-		});
+		if($('.masonry-items').length) {
+			$('.masonry-items').masonry({
+				itemSelector: '.masonry-item',
+				horizontalOrder: true
+			});
+		}
 
 	}
 
-	customMasonry('.masonry-items');
-	customMasonry('.projects-items');
+	customMasonry();
 
 
 	$(window).on('resize', customMasonry);
@@ -351,16 +355,18 @@ $(function () {
 				}
 			})
 			const currentSection = currentScrolledSections[currentScrolledSections.length - 1]
-			const currentSectionId = currentSection[0].id
-			const currentMenuItem = $(menuItems.filter(`[data-target="#${currentSectionId}"]`)[0])
-			const lastMenuItem = $(menuItems[menuItems.length - 1])
 			if (currentSection) {
-				if (docHeight - winScrolled < 150) {
-					lastMenuItem.addClass('is-active').siblings().removeClass('is-active')
-				} else {
-					currentMenuItem.addClass('is-active').siblings().removeClass('is-active')
-				}
+				const currentSectionId = currentSection[0].id
+				const currentMenuItem = $(menuItems.filter(`[data-target="#${currentSectionId}"]`)[0])
+				const lastMenuItem = $(menuItems[menuItems.length - 1])
+				if (currentSection) {
+					if (docHeight - winScrolled < 150) {
+						lastMenuItem.addClass('is-active').siblings().removeClass('is-active')
+					} else {
+						currentMenuItem.addClass('is-active').siblings().removeClass('is-active')
+					}
 
+				}
 			}
 		});
 
@@ -644,10 +650,10 @@ $(function () {
 		} = screen.orientation
 		if (angle !== 0) { //landscape
 			digitalMobileSlider(true) //landscape
-			customMasonry('.projects-items');
+			customMasonry();
 		} else {
 			digitalMobileSlider(false)
-			customMasonry('.projects-items');
+			customMasonry();
 		}
 	});
 
@@ -697,7 +703,8 @@ $(function () {
 							slidesToShow: 1,
 							slidesToScroll: 1,
 							mobileFirst: true,
-							arrows: false
+							prevArrow: '#filterBtnsPrev',
+							nextArrow: '#filterBtnsNext'
 						});
 					}
 				}
@@ -707,5 +714,27 @@ $(function () {
 	}
 
 	filtersMobileSlider()
+
+
+	function laxCustomAnimation() {
+
+		if ($(window).width() > 992) {
+
+			window.onload = function () {
+				lax.setup() // init
+
+				const updateLax = () => {
+					lax.update(window.scrollY)
+					window.requestAnimationFrame(updateLax)
+				}
+
+				window.requestAnimationFrame(updateLax)
+			}
+
+		}
+
+	}
+
+	laxCustomAnimation()
 
 });

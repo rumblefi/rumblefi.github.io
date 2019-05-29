@@ -441,6 +441,7 @@ span.select2-selection.select2-selection--single {
 	}
 
 	&--4 {
+		position: relative;
 		border: solid 2px #fa5244;
 		color: #fa5244;
 		width: 260px;
@@ -452,11 +453,11 @@ span.select2-selection.select2-selection--single {
 			position: absolute;
 			left: 40px;
 			display: block;
-			width: 25px;
-			height: 25px;
+			width: 29px;
+			height: 29px;
 			background-size: cover;
 			background-repeat: no-repeat;
-			background-image: url('../img/icons/file-icon.png');
+			background-image: url('../img/icons/link.svg');
 		}
 
 		&:hover {
@@ -498,8 +499,10 @@ span.select2-selection.select2-selection--single {
 
 		&__circle {
 			position: absolute;
-			left: -5px;
-			top: -90px;
+			left: -15px;
+			top: -125px;
+			width: 100%;
+			max-width: 415px;
 
 			@include sm() {
 				left: -235px;
@@ -530,7 +533,10 @@ span.select2-selection.select2-selection--single {
 
 		}
 
+
 		&__triangle {
+			width: 100%;
+			max-width: 345px;
 
 			@include md() {
 				max-width: 260px;
@@ -542,6 +548,8 @@ span.select2-selection.select2-selection--single {
 			position: absolute;
 			right: 0;
 			bottom: -200px;
+			width: 100%;
+			max-width: 405px;
 
 			@include md() {
 				max-width: 200px;
@@ -576,6 +584,8 @@ span.select2-selection.select2-selection--single {
 			position: absolute;
 			left: -5px;
 			top: 0;
+			width: 100%;
+			max-width: 216px;
 
 			@include md() {
 				max-width: 175px;
@@ -591,6 +601,8 @@ span.select2-selection.select2-selection--single {
 			position: absolute;
 			top: 25px;
 			right: 105px;
+			width: 100%;
+			max-width: 157px;
 
 			@include md() {
 				max-width: 125px;
@@ -611,8 +623,10 @@ span.select2-selection.select2-selection--single {
 
 		&__inner-rectangle {
 			position: absolute;
-			right: 0;
+			right: -30px;
 			bottom: 60px;
+			width: 100%;
+			max-width: 200px;
 
 			@include md() {
 				max-width: 150px;
@@ -1155,6 +1169,17 @@ span.select2-selection.select2-selection--single {
 			left: 0;
 			right: 0;
 			opacity: 0;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 17px;
+				height: 12px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url('../img/icons/arrow.svg');
+			}
+
 		}
 
 	}
@@ -1570,8 +1595,13 @@ span.select2-selection.select2-selection--single {
 	}
 
 	&__control {
+		width: 43px;
+		height: 43px;
 		margin-right: 16px;
 		flex-shrink: 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url('../img/icons/flag.svg');
 	}
 
 }
@@ -1635,6 +1665,8 @@ span.select2-selection.select2-selection--single {
 		position: absolute;
 		left: 30px;
 		bottom: 100px;
+		width: 100%;
+		max-width: 194px;
 
 		@include md() {
 			max-width: 150px;
@@ -1645,9 +1677,10 @@ span.select2-selection.select2-selection--single {
 
 	&__circle {
 		position: absolute;
-		top: 0;
 		right: 100px;
-		top: 0px;
+		width: 100%;
+		max-width: 287px;
+		top: 0;
 
 		@include md() {
 			max-width: 170px;
@@ -1658,8 +1691,10 @@ span.select2-selection.select2-selection--single {
 
 	&__rectangle {
 		position: absolute;
-		bottom: -150px;
+		bottom: -185px;
 		right: 0;
+		width: 100%;
+		max-width: 378px;
 
 		@include md() {
 			right: -80px;
@@ -1863,6 +1898,10 @@ span.select2-selection.select2-selection--single {
 
 	&__logo {
 
+		img {
+			width: 201px;
+		}
+
 		@include md() {
 			display: flex;
 			margin-bottom: 30px;
@@ -1958,6 +1997,8 @@ span.select2-selection.select2-selection--single {
 		left: 0;
 		top: 0;
 		pointer-events: none;
+		width: 100%;
+		max-width: 371px;
 
 		@include md() {
 			max-width: 280px;
@@ -1981,12 +2022,18 @@ span.select2-selection.select2-selection--single {
 	}
 
 	&__polygon {
+		width: 100%;
 		position: absolute;
+		z-index: -1;
 		left: 50%;
 		transform: translateX(-50%);
 		bottom: 0;
-		width: 100%;
 		pointer-events: none;
+
+		img {
+			width: 245px;
+			height: 264px;
+		}
 
 		@include md() {
 			left: auto;
@@ -1995,6 +2042,11 @@ span.select2-selection.select2-selection--single {
 			max-width: 170px;
 		}
 
+	}
+
+	&__polygon-col {
+		display: flex;
+		justify-content: flex-end;
 	}
 
 	&-list {
@@ -2057,8 +2109,32 @@ span.select2-selection.select2-selection--single {
 				margin-bottom: 20px;
 			}
 
+			&:first-child {
+
+				.nav-contacts__icon {
+					width: 24px;
+					height: 33px;
+				}
+
+			}
+
+			&:nth-child(2) {
+
+				.nav-contacts__icon {
+					width: 30px;
+					height: 22px;
+				}
+
+			}
+
 			&:last-child {
 				margin-bottom: 0;
+
+				.nav-contacts__icon {
+					width: 21px;
+					height: 34px;
+				}
+
 			}
 
 		}
@@ -2092,6 +2168,11 @@ span.select2-selection.select2-selection--single {
 			&:first-child {
 				margin-right: 62px;
 
+				img {
+					width: 14px;
+					height: 29px;
+				}
+
 				@include sm() {
 					margin-right: 40px;
 				}
@@ -2100,6 +2181,11 @@ span.select2-selection.select2-selection--single {
 
 			&:nth-child(2) {
 				margin-right: 51px;
+
+				img {
+					width: 29px;
+					height: 23px;
+				}
 
 				@include sm() {
 					margin-right: 40px;
@@ -2110,8 +2196,22 @@ span.select2-selection.select2-selection--single {
 			&:nth-child(3) {
 				margin-right: 50px;
 
+				img {
+					width: 33px;
+					height: 19px;
+				}
+
 				@include sm() {
 					margin-right: 40px;
+				}
+
+			}
+
+			&:last-child {
+
+				img {
+					width: 30px;
+					height: 30px;
 				}
 
 			}
@@ -2245,7 +2345,7 @@ span.select2-selection.select2-selection--single {
 				&+.popup-agreement__checkbox {
 					opacity: 1;
 
-					img {
+					&::before {
 						opacity: 1;
 					}
 
@@ -2267,7 +2367,14 @@ span.select2-selection.select2-selection--single {
 			opacity: 0.2;
 			transition: 0.3s opacity;
 
-			img {
+			&::before {
+				content: '';
+				display: block;
+				width: 14px;
+				height: 11px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url('../img/icons/check.svg');
 				transition: 0.3s opacity;
 				opacity: 0;
 			}
@@ -2343,6 +2450,11 @@ span.select2-selection.select2-selection--single {
 		transform: translateX(-50%);
 		bottom: 80px;
 
+		img {
+			width: 101px;
+			height: 101px;
+		}
+
 		@include md() {
 			max-width: 100px;
 			transform: none;
@@ -2358,12 +2470,18 @@ span.select2-selection.select2-selection--single {
 		top: 50%;
 		transform: translate(-50%, -50%);
 
+		img {
+			width: 100%;
+			width: 438px;
+			max-width: 100%;
+		}
+
 		@include md() {
 			top: 50px;
 			transform: translateX(-50%);
 		}
 
-		img{
+		img {
 
 			@include md() {
 				max-width: 230px;
@@ -2377,6 +2495,12 @@ span.select2-selection.select2-selection--single {
 		position: absolute;
 		right: 0;
 		bottom: 90px;
+
+		img {
+			width: 100%;
+			width: 215px;
+			height: 245px;
+		}
 
 		@include md() {
 			max-width: 120px;
@@ -2432,7 +2556,7 @@ span.select2-selection.select2-selection--single {
 
 .subject {
 	padding-top: 105px;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 
 	@include md() {
 		padding-top: 70px;
@@ -2511,6 +2635,10 @@ span.select2-selection.select2-selection--single {
 				margin-top: 0;
 			}
 
+			.subject-item__icon-block {
+				background-image: url('../img/icons/subject-1.svg');
+			}
+
 		}
 
 		&:last-child {
@@ -2518,6 +2646,10 @@ span.select2-selection.select2-selection--single {
 
 			@include md() {
 				margin-top: 60px;
+			}
+
+			.subject-item__icon-block {
+				background-image: url('../img/icons/subject-2.svg');
 			}
 
 		}
@@ -2553,6 +2685,8 @@ span.select2-selection.select2-selection--single {
 			transform: translateY(-30px);
 			margin-bottom: 9px;
 			flex-shrink: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
 
 			@include md() {
 				position: absolute;
@@ -2598,6 +2732,9 @@ span.select2-selection.select2-selection--single {
 
 	&__triangle-1 {
 		position: absolute;
+		top: 0;
+		width: 100%;
+		max-width: 352px;
 
 		@include md() {
 			max-width: 200px;
@@ -2609,6 +2746,8 @@ span.select2-selection.select2-selection--single {
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		width: 100%;
+		max-width: 543px;
 
 		@include md() {
 			max-width: 280px;
@@ -2660,12 +2799,8 @@ span.select2-selection.select2-selection--single {
 
 		&__icon-block {
 			display: flex;
-			align-items: center;
-			justify-content: center;
 			width: 86px;
 			height: 86px;
-			background-color: #ffffff;
-			border-radius: 50%;
 			margin-bottom: 20px;
 
 			@include md() {
@@ -2715,6 +2850,24 @@ span.select2-selection.select2-selection--single {
 	cursor: pointer;
 	user-select: none;
 	transition: 0.3s background-color;
+
+	&--prev {
+
+		&::before {
+			transform: scaleX(-1);
+		}
+
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		width: 17px;
+		height: 12px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url('../img/icons/slider-arrow.svg');
+	}
 
 	&.is-active,
 	&:hover {
@@ -2776,12 +2929,8 @@ span.select2-selection.select2-selection--single {
 
 		&__icon-block {
 			display: flex;
-			align-items: center;
-			justify-content: center;
 			width: 122px;
 			height: 122px;
-			border-radius: 50%;
-			background-color: #eae73f;
 			margin-bottom: 25px;
 
 			@include md() {
@@ -2902,7 +3051,7 @@ span.select2-selection.select2-selection--single {
 .expert-center {
 	background-color: #F4F4F4;
 	padding-top: 105px;
-	padding-bottom: 180px;
+	padding-bottom: 100px;
 
 	@include md() {
 		padding-top: 80px;
@@ -2959,7 +3108,7 @@ span.select2-selection.select2-selection--single {
 		width: 50%;
 
 		&:last-child {
-			margin-top: 40px;
+			margin-top: 50px;
 
 			@include md() {
 				margin-top: 0;
@@ -3033,7 +3182,7 @@ span.select2-selection.select2-selection--single {
 		border-radius: 50%;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-image: url('../img/icons/checkmark.png');
+		background-image: url('../img/icons/icon_ok.svg');
 		background-position: 50% 50%;
 		margin-bottom: 21px;
 	}
@@ -3089,9 +3238,11 @@ span.select2-selection.select2-selection--single {
 
 	&__circle {
 		position: absolute;
-		left: 0;
-		top: 0;
+		top: -20px;
 		pointer-events: none;
+		width: 100%;
+		max-width: 457px;
+		left: 0;
 
 		@include md() {
 			max-width: 200px;
@@ -3104,6 +3255,8 @@ span.select2-selection.select2-selection--single {
 		right: 0;
 		bottom: -100px;
 		pointer-events: none;
+		width: 100%;
+		max-width: 451px;
 
 		@include md() {
 			max-width: 320px;
@@ -3155,7 +3308,7 @@ span.select2-selection.select2-selection--single {
 
 .target-audience {
 	padding-top: 105px;
-	padding-bottom: 70px;
+	padding-bottom: 20px;
 
 	@include md() {
 		padding-top: 70px;
@@ -3167,11 +3320,11 @@ span.select2-selection.select2-selection--single {
 		font-family: $light-font;
 		font-weight: 300;
 		text-align: center;
-		margin-bottom: 80px;
+		margin-bottom: 100px;
 
 		@include md() {
 			font-size: 40px;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 		}
 
 	}
@@ -3182,12 +3335,8 @@ span.select2-selection.select2-selection--single {
 			margin-bottom: 40px;
 		}
 
-		&:first-child {
-			margin-top: 40px;
-		}
-
 		&:nth-child(2) {
-			margin-top: 80px;
+			margin-top: 40px;
 
 			@include md() {
 				margin-top: 0;
@@ -3196,7 +3345,7 @@ span.select2-selection.select2-selection--single {
 		}
 
 		&:nth-child(3) {
-			margin-top: 120px;
+			margin-top: 80px;
 
 			@include md() {
 				margin-top: 0;
@@ -3269,9 +3418,11 @@ span.select2-selection.select2-selection--single {
 
 	&__triangle {
 		position: absolute;
-		top: 0;
+		top: 3px;
 		right: 0;
 		pointer-events: none;
+		width: 100%;
+		max-width: 322px;
 
 		@include md() {
 			max-width: 180px;
@@ -3537,7 +3688,7 @@ span.select2-selection.select2-selection--single {
 			align-items: center;
 
 			@include md() {
-				padding-top: 40px;
+				padding-top: 20px;
 			}
 
 		}
@@ -3573,7 +3724,7 @@ span.select2-selection.select2-selection--single {
 
 .results {
 	background-color: #F4F4F4;
-	padding-bottom: 140px;
+	padding-bottom: 50px;
 
 	&__title {
 		font-size: 64px;
@@ -3581,7 +3732,7 @@ span.select2-selection.select2-selection--single {
 		font-weight: 300;
 		padding-top: 105px;
 		text-align: center;
-		margin-bottom: 70px;
+		margin-bottom: 100px;
 
 		@include md() {
 			font-size: 40px;
@@ -3603,7 +3754,7 @@ span.select2-selection.select2-selection--single {
 	&__col {
 
 		&--last {
-			margin-top: 80px;
+			margin-top: 50px;
 
 			@include md() {
 				margin-top: 0;
@@ -3782,6 +3933,8 @@ span.select2-selection.select2-selection--single {
 		left: 0;
 		bottom: -50px;
 		pointer-events: none;
+		width: 100%;
+		max-width: 318px;
 
 		@include md() {
 			max-width: 170px;
@@ -3795,6 +3948,8 @@ span.select2-selection.select2-selection--single {
 		right: 60px;
 		top: 0;
 		pointer-events: none;
+		width: 100%;
+		max-width: 427px;
 
 		@include md() {
 			max-width: 210px;
@@ -3911,6 +4066,12 @@ span.select2-selection.select2-selection--single {
 		top: 50%;
 		left: 0;
 		transform: translate(-55%, -50%);
+
+		img {
+			width: 235px;
+			height: 235px;
+		}
+
 	}
 
 	&__row {
@@ -3958,7 +4119,7 @@ span.select2-selection.select2-selection--single {
 		height: 66px;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-image: url('../img/icons/agency-quote-icon.png');
+		background-image: url('../img/icons/agency-quote-icon.svg');
 		background-position: 50% 50%;
 		margin-bottom: 38px;
 
@@ -4003,7 +4164,7 @@ span.select2-selection.select2-selection--single {
 		height: 11px;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-image: url('../img/icons/seo-arrow.png');
+		background-image: url('../img/icons/arrow-white.svg');
 		background-position: 50% 50%;
 		cursor: pointer;
 	}
@@ -4012,7 +4173,7 @@ span.select2-selection.select2-selection--single {
 
 .subscribe-instagram {
 
-	.container{
+	.container {
 
 		@include md() {
 			padding-left: 0;
@@ -4021,7 +4182,7 @@ span.select2-selection.select2-selection--single {
 
 	}
 
-	.row{
+	.row {
 
 		@include md() {
 			margin-left: 0;
@@ -4053,11 +4214,11 @@ span.select2-selection.select2-selection--single {
 	}
 
 	&__prev {
-		left: 30px;
+		left: 5px;
 	}
 
 	&__next {
-		right: 30px;
+		right: 5px;
 	}
 
 	&__photos {
@@ -4102,6 +4263,8 @@ span.select2-selection.select2-selection--single {
 		}
 
 		&__icon {
+			width: 49px;
+			height: 49px;
 			margin-bottom: 15px;
 
 			@include md() {
@@ -4153,6 +4316,8 @@ span.select2-selection.select2-selection--single {
 		pointer-events: none;
 
 		img {
+			width: 204px;
+			height: 204px;
 			position: absolute;
 			top: 0;
 			left: -40px;
@@ -4167,8 +4332,12 @@ span.select2-selection.select2-selection--single {
 
 	&__circle {
 		position: absolute;
-		right: 0;
-		bottom: -150px;
+		right: -50px;
+		bottom: -100px;
+		width: 100%;
+		height: 100%;
+		max-width: 366px;
+		max-height: 277px;
 
 		@include md() {
 			max-width: 300px;
@@ -4259,12 +4428,62 @@ span.select2-selection.select2-selection--single {
 
 .directions {
 	padding-top: 105px;
-	padding-bottom: 100px;
 	background-color: #75CBC4;
 
 	@include md() {
 		padding-top: 70px;
 		padding-bottom: 110px;
+	}
+
+	&__container {
+		padding-left: 10px;
+		padding-right: 10px;
+
+		@include md() {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+	}
+
+	&__row {
+		margin-left: -10px;
+		margin-right: -10px;
+
+		@include md() {
+			margin-left: -20px;
+			margin-right: - 20px;
+		}
+
+	}
+
+	&__col {
+		padding-left: 10px;
+		padding-right: 10px;
+
+		@include md() {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		&:nth-child(2) {
+			margin-top: 40px;
+
+			@include md() {
+				margin-top: 60px;
+			}
+
+		}
+
+		&:nth-child(3) {
+			margin-top: 80px;
+
+			@include md() {
+				margin-top: 60px;
+			}
+
+		}
+
 	}
 
 	&__title {
@@ -4273,96 +4492,15 @@ span.select2-selection.select2-selection--single {
 		font-size: 64px;
 		color: #fff;
 		text-align: center;
-		margin-bottom: 65px;
+		margin-bottom: 125px;
 
 		@include md() {
 			font-size: 60px;
-			margin-bottom: 40px;
+			margin-bottom: 70px;
 		}
 
 		@include sm() {
 			font-size: 40px;
-		}
-
-	}
-
-	.masonry-item {
-		margin-bottom: 100px;
-		transition: 0.1s;
-
-		@include md() {
-			width: 100%;
-			margin-bottom: 65px;
-		}
-
-		@include sm() {
-			margin-bottom: 50px;
-		}
-
-		&:first-child {
-			margin-top: 40px;
-
-			img {
-				width: 55px;
-				height: 51px;
-			}
-
-		}
-
-		&:nth-child(2) {
-			margin-top: 80px;
-
-			img {
-				width: 54px;
-				height: 50px;
-			}
-
-			@include md() {
-				margin-top: 0;
-			}
-
-		}
-
-		&:nth-child(3) {
-			margin-top: 120px;
-
-			img {
-				width: 62px;
-				height: 48px;
-			}
-
-			@include md() {
-				margin-top: 0;
-			}
-
-		}
-
-		&:nth-child(4) {
-
-			img {
-				width: 65px;
-				height: 57px;
-			}
-
-		}
-
-		&:nth-child(5) {
-
-			img {
-				width: 57px;
-				height: 52px;
-			}
-
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-
-			img {
-				width: 53px;
-				height: 67px;
-			}
-
 		}
 
 	}
@@ -4377,10 +4515,70 @@ span.select2-selection.select2-selection--single {
 		background-color: #f4f4f4;
 		text-align: center;
 		transition: 0.3s;
+		margin-bottom: 95px;
+
+		&--1 {
+
+			img {
+				width: 55px;
+				height: 51px;
+			}
+
+		}
+
+		&--2 {
+
+			img {
+				width: 65px;
+				height: 57px;
+			}
+
+		}
+
+		&--3 {
+
+			img {
+				width: 54px;
+				height: 50px;
+			}
+
+		}
+
+		&--4 {
+
+			img {
+				width: 57px;
+				height: 52px;
+			}
+
+		}
+
+		&--5 {
+
+			img {
+				width: 62px;
+				height: 48px;
+			}
+
+		}
+
+		&--6 {
+
+			img {
+				width: 53px;
+				height: 67px;
+			}
+
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 
 		@include md() {
 			height: 280px;
-			padding-top: 125px;
+			padding-top: 135px;
+			margin-bottom: 60px;
 		}
 
 		@include sm() {
@@ -4426,7 +4624,7 @@ span.select2-selection.select2-selection--single {
 
 			@include md() {
 				max-width: 360px;
-				margin-bottom: 15px;
+				margin-bottom: 0;
 			}
 
 		}
@@ -4436,6 +4634,10 @@ span.select2-selection.select2-selection--single {
 			align-items: center;
 			opacity: 0;
 			transition: 0.3s opacity;
+
+			@include md() {
+				display: none;
+			}
 
 			&__text {
 				font-size: 18px;
@@ -4448,7 +4650,7 @@ span.select2-selection.select2-selection--single {
 				height: 12px;
 				background-size: cover;
 				background-repeat: no-repeat;
-				background-image: url('../img/icons/directions-arrow.png');
+				background-image: url('../img/icons/arrow.svg');
 			}
 
 		}
@@ -4494,6 +4696,11 @@ span.select2-selection.select2-selection--single {
 		border: none;
 		cursor: pointer;
 
+		img {
+			width: 24px;
+			height: 24px;
+		}
+
 		&:focus {
 			outline: 0;
 		}
@@ -4505,6 +4712,48 @@ span.select2-selection.select2-selection--single {
 .filter-btns {
 	margin-bottom: 45px;
 
+	&__container {
+		position: relative;
+
+		@include md() {
+			padding-left: 45px;
+			padding-right: 45px;
+		}
+
+	}
+
+	&__control {
+		display: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
+		width: auto;
+		height: auto;
+		border: none;
+		background-color: transparent !important;
+
+		@include md() {
+			display: flex;
+		}
+
+		&::before {
+			display: block;
+			width: 11px;
+			height: 18.4px;
+			background-image: url('../img/icons/arrow-2-next.svg');
+		}
+
+		&--prev {
+			left: 20px;
+		}
+
+		&--next {
+			right: 20px;
+		}
+
+	}
+
 	&__row {
 		justify-content: center;
 	}
@@ -4515,17 +4764,6 @@ span.select2-selection.select2-selection--single {
 		justify-content: space-between;
 	}
 
-}
-
-.Rounded_Rectangle_3 {
-	border-radius: 25px;
-	background-color: rgb(234, 231, 63);
-	position: absolute;
-	left: 575px;
-	top: 812px;
-	width: 255px;
-	height: 50px;
-	z-index: 146;
 }
 
 .filter-btn {
@@ -4546,7 +4784,8 @@ span.select2-selection.select2-selection--single {
 	letter-spacing: 0.01em;
 
 	&:hover,
-	&.is-active {
+	&.is-active,
+	&.slick-current {
 		background-color: #EAE73F;
 	}
 
@@ -4785,11 +5024,7 @@ span.select2-selection.select2-selection--single {
 	&.is-active {
 
 		#{$this}__arrow {
-
-			&::before {
-				transform: rotate(180deg);
-			}
-
+			transform: rotate(180deg);
 		}
 
 	}
@@ -4833,18 +5068,10 @@ span.select2-selection.select2-selection--single {
 		border-radius: 50%;
 		transition: 0.3s;
 		flex-shrink: 0;
-
-		&::before {
-			content: '';
-			display: block;
-			width: 18px;
-			height: 10px;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-image: url('../img/icons/options-arrow.png');
-			transition: 0.3s;
-		}
-
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url('../img/icons/solution-arrow-down.svg');
+		transition: 0.3s transform;
 	}
 
 	&__info {
@@ -4980,7 +5207,7 @@ span.select2-selection.select2-selection--single {
 	transition: 0.3s color;
 
 	&:hover {
-		color: #005157;
+		color: #00beaf;
 
 		#{$this}__circle {
 			background-color: transparent;
@@ -4998,18 +5225,13 @@ span.select2-selection.select2-selection--single {
 		border-radius: 50%;
 		margin-right: 10px;
 		border: solid 2px #eae73f;
-		transition: 0.3s background-color;
-
-		&::before {
-			content: '';
-			width: 27px;
-			height: 34px;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-image: url('../img/icons/download-icon.png');
-		}
-
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url('../img/icons/pdf.svg');
+		overflow: hidden;
+		transition: 0.3s;
 	}
+
 
 	&__text {
 		font-size: 20px;
@@ -5350,7 +5572,7 @@ span.select2-selection.select2-selection--single {
 				height: 11px;
 				background-size: cover;
 				background-repeat: no-repeat;
-				background-image: url('../img/icons/terms-arrow.png');
+				background-image: url('../img/icons/terms-arrow.svg');
 			}
 
 		}
@@ -5397,6 +5619,34 @@ span.select2-selection.select2-selection--single {
 		border-radius: 50%;
 		cursor: pointer;
 		user-select: none;
+		position: relative;
+
+		&--prev {
+
+			&::before {
+				transform: scaleX(-1);
+			}
+
+		}
+
+		&--next {
+
+			&::before {
+				transform: rotate(-90deg);
+			}
+
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 14px;
+			height: 10px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-image: url('../img/icons/arrow.svg');
+		}
+
 	}
 
 	&-list {
@@ -5498,8 +5748,8 @@ span.select2-selection.select2-selection--single {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		width: 9px;
-		height: 17px;
+		width: 11px;
+		height: 18.4px;
 		background-size: cover;
 		background-repeat: no-repeat;
 		cursor: pointer;
@@ -5510,13 +5760,13 @@ span.select2-selection.select2-selection--single {
 		&--prev {
 			left: 0;
 			margin-right: 25px;
-			background-image: url('../img/icons/arrow-2-prev.png');
+			background-image: url('../img/icons/arrow-2-prev.svg');
 		}
 
 		&--next {
 			right: 0;
 			margin-left: 25px;
-			background-image: url('../img/icons/arrow-2-next.png');
+			background-image: url('../img/icons/arrow-2-next.svg');
 		}
 
 	}
@@ -5705,7 +5955,6 @@ span.select2-selection.select2-selection--single {
 	}
 
 }
-
 
 .rotateBox {
 	transform: rotate(var(--r));
