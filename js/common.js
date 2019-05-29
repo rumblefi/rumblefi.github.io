@@ -468,25 +468,22 @@ $(function () {
 
 	function mobileSlider() {
 
-		/* Slick needs no get Reinitialized on window Resize after it was destroyed */
-		$(window).on('load resize orientationchange', function () {
-			$('.js-mobile-slider').each(function () {
-				var $carousel = $(this);
-				if ($(window).width() > 992) {
-					if ($carousel.hasClass('slick-initialized')) {
-						$carousel.slick('unslick');
-					}
-				} else {
-					if (!$carousel.hasClass('slick-initialized')) {
-						$carousel.slick({
-							slidesToShow: 1,
-							slidesToScroll: 1,
-							mobileFirst: true,
-							arrows: false
-						});
-					}
+		$('.js-mobile-slider').each(function () {
+			var $carousel = $(this);
+			if ($(window).width() > 992) {
+				if ($carousel.hasClass('slick-initialized')) {
+					$carousel.slick('unslick');
 				}
-			});
+			} else {
+				if (!$carousel.hasClass('slick-initialized')) {
+					$carousel.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						mobileFirst: true,
+						arrows: false
+					});
+				}
+			}
 		});
 
 	}
@@ -536,23 +533,21 @@ $(function () {
 
 	function glossarySlider() {
 
-		$(window).on('load resize orientationchange', function () {
-			$('#js-glossary-letters').each(function () {
-				var $carousel = $(this);
-				if ($(window).width() > 992) {
-					if ($carousel.hasClass('slick-initialized')) {
-						$carousel.slick('unslick');
-					}
-				} else {
-					if (!$carousel.hasClass('slick-initialized')) {
-						$carousel.slick({
-							arrows: false,
-							slidesToShow: 7,
-							slidesToScroll: 7
-						});
-					}
+		$('#js-glossary-letters').each(function () {
+			var $carousel = $(this);
+			if ($(window).width() > 992) {
+				if ($carousel.hasClass('slick-initialized')) {
+					$carousel.slick('unslick');
 				}
-			});
+			} else {
+				if (!$carousel.hasClass('slick-initialized')) {
+					$carousel.slick({
+						arrows: false,
+						slidesToShow: 7,
+						slidesToScroll: 7
+					});
+				}
+			}
 		});
 
 	}
@@ -709,9 +704,6 @@ $(function () {
 				});
 			}
 		});
-		// /* Slick needs no get Reinitialized on window Resize after it was destroyed */
-		// $(window).on('ready resize orientationchange', function () {
-		// });
 
 	}
 
