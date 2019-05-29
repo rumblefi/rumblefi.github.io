@@ -651,11 +651,9 @@ $(function () {
 		if (angle !== 0) { //landscape
 			digitalMobileSlider(true) //landscape
 			customMasonry();
-			filtersMobileSlider(1)
 		} else {
 			digitalMobileSlider(false)
 			customMasonry();
-			filtersMobileSlider(1)
 		}
 	});
 
@@ -672,7 +670,7 @@ $(function () {
 
 	customVanillaTilt()
 
-	function filtersMobileSlider(slidesToShow) {
+	function filtersMobileSlider() {
 
 		$('#filtersMobileSlider').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
 			//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
@@ -699,11 +697,10 @@ $(function () {
 					if ($carousel.hasClass('slick-initialized')) {
 						$carousel.slick('unslick');
 					}
-				} 
-				else {
+				} else {
 					if (!$carousel.hasClass('slick-initialized')) {
 						$carousel.slick({
-							slidesToShow,
+							slidesToShow: 1,
 							slidesToScroll: 1,
 							mobileFirst: true,
 							prevArrow: '#filterBtnsPrev',
@@ -716,7 +713,9 @@ $(function () {
 
 	}
 
-	filtersMobileSlider(1)
+	setTimeout(() => {
+		filtersMobileSlider()	
+	});
 
 
 	function laxCustomAnimation() {
