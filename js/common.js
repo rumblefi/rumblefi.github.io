@@ -687,13 +687,9 @@ $(function () {
 		$('#filtersMobileSlider').each(function () {
 			var $carousel = $(this);
 			if ($(window).width() > 992) {
-				$carousel.slick({
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					mobileFirst: true,
-					prevArrow: '#filterBtnsPrev',
-					nextArrow: '#filterBtnsNext'
-				});
+				if ($carousel.hasClass('slick-initialized')) {
+					$carousel.slick('unslick');
+				}
 			} else {
 				$carousel.slick({
 					slidesToShow: 1,
