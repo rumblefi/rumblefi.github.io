@@ -1,5 +1,0 @@
-@mixin landscape() {
-	@media (max-width: 992px) and (orientation:landscape) {
-		@content;
-	}
-}

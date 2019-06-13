@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html class="js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>AFR</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="shortcut icon" href="img/favicon.ico.jpeg">
+</head>
+
+<body class="overflow">
+
+  <div class="preloader" id="preloader" >
+
+      <div class="sk-double-bounce">
+
+        <div class="sk-child sk-double-bounce-1"></div>
+
+        <div class="sk-child sk-double-bounce-2"></div>
+
+      </div>
+
+  </div>
+
+  <div class="global-wrapper main-page">
+    <div class="right-panel">
+      <form class="right-panel__item right-panel__lang lang-block" action="#" method="post">
+        <input type="hidden" name="language" value="ru">
+        <input type="hidden" name="language" value="en">
+        <button class="lang-block__link">eng</button>
+      </form><div class="right-panel__item right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
+        <svg width="30" height="22">
+          <use xlink:href="img/svg.svg#mail-sm"></use>
+        </svg></div>
+      <div class="right-panel__item right-panel__search">
+        <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
+          <svg width="28" height="28">
+            <use xlink:href="img/svg.svg#search-sm"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <section class="intro">
+      <!-- чтобы затемнить слайдер при выборе чекбокса нужно <div class="intro__video-bg"></div> добавить класс is-dimmed -->
+      <div class="intro__video-bg">
+        <video width="640" height="360" autoplay muted loop>
+          <source src="video/science.webm" type="video/webm">
+          <source src="video/main.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="intro__wrapper">
+        <div class="intro__title">
+          <h1>Комплексная модернизация производства</h1>
+          <div class="intro__title--min">Решения, которые работают</div>
+        </div>
+      </div>
+    </section>
+    <header class="page-header js-header light">
+      <div class="page-header__main">
+        <div class="page-header__main-wrapper">
+          <div class="page-header__inner"><a class="page-header__logo logo" href="main.html"><span class="visually-hidden">AFR</span>
+              <svg>
+                <use xlink:href="img/svg.svg#logo"></use>
+              </svg></a>
+            <div class="page-header__mobile">
+              <button class="page-header__search js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/svg.svg#search-sm"></use>
+                </svg>
+              </button>
+              <div class="page-header__mail js-modal-trigger" data-target="popupSendMessage" >
+                <svg width="22" height="16">
+                  <use xlink:href="img/svg.svg#mail-sm"> </use>
+                </svg></div>
+                <a href="" class="page-header__lang">eng</a>
+            </div>
+            <button class="nav-trigger js-nav-trigger" type="button"><span class="visually-hidden">Меню</span><span
+                class="stripe"></span></button>
+          </div>
+          <nav class="main-navigation">
+            <ul class="main-navigation__list navigation-list">
+              <li class="navigation-list__item expandable js-subnav-trigger"><a class="navigation-list__link" href="company.html">Компания</a>
+                <ul class="subnavigation">
+                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Команда</a></li>
+                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Соискателям</a></li>
+                </ul>
+              </li>
+              <li class="navigation-list__item expandable js-subnav-trigger"><a class="navigation-list__link" href="services.html">Услуги</a>
+                <ul class="subnavigation">
+                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Проекты «под ключ»</a></li>
+                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Поставка оборудования</a></li>
+                  <li class="subnavigation__item"> <a class="subnavigation__link" href="#">Работы и услуги</a></li>
+                </ul>
+              </li>
+              <li class="navigation-list__item"><a class="navigation-list__link" href="press.html">Пресс-центр</a>
+              </li>
+              <li class="navigation-list__item"><a class="navigation-list__link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="tagline">
+      <div class="tagline__wrapper wrapper-calc">
+        <div class="tagline__title">Инженеры
+          <div class="tagline__title--br">&ndash; инженерам </div>
+        </div>
+        <div class="tagline__vertical"><a class="vertical-text tagline__vertical-text" href="company.html">О компании
+          </a></div>
+        <div class="tagline__slogan">
+          <p class="tagline__text">Решение сложных технических задач наше призвание. Мы любим и умеем создавать
+            совершенное производство в реальных обстоятельствах.</p>
+        </div>
+      </div>
+    </section>
+    <section class="three-tiles">
+      <div class="wrapper-calc three-tiles__wrapper"><a class="three-tiles__item" href="#">
+          <div class="three-tiles__bg">
+            <picture>
+              <source media="(max-width: 768px)" data-srcset="img/new/projects2.jpg"><img class="lazyload" data-src="img/new/projects2@2x.jpg"
+                alt="">
+            </picture>
+          </div>
+          <div class="three-tiles__content">
+            <h3 class="three-tiles__title">Проекты «под ключ»</h3>
+            <p class="three-tiles__text">Проекты любой сложности по модернизации и переоснащению производства от
+              проектирования до сдачи готового объекта. Сквозная ответственность и гарантийная поддержка включены.</p>
+          </div>
+        </a><a class="three-tiles__item" href="#">
+          <div class="three-tiles__bg">
+            <picture>
+              <source media="(max-width: 768px)" data-srcset="img/new/projects.jpg"><img class="lazyload" data-src="img/new/projects@2x.jpg"
+                alt="">
+            </picture>
+          </div>
+          <div class="three-tiles__content">
+            <h3 class="three-tiles__title">Поставка оборудования</h3>
+            <p class="three-tiles__text">Подбор, комплектация и поставка технологического оборудования из Европы на
+              условиях DDP площадка заказчика. Монтаж, интеграция и запуск силами собственной сервисной команды.
+              Гарантийная поддержка, постпродажное обслуживание и поставка запасных частей.</p>
+          </div>
+        </a><a class="three-tiles__item" href="#">
+          <div class="three-tiles__bg">
+            <picture>
+              <source media="(max-width: 768px)" data-srcset="img/new/services.jpg"><img class="lazyload" data-src="img/new/services@2x.jpg"
+                alt="">
+            </picture>
+          </div>
+          <div class="three-tiles__content">
+            <h3 class="three-tiles__title">Работы / услуги</h3>
+            <p class="three-tiles__text">Полная сервисная поддержка проекта силами собственной команды: разработка
+              технических решений, управление проектом, демонтажные, монтажные и шеф-монтажные работы, программная
+              интеграция оборудования, подготовка к запуску нового продукта.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="industry">
+      <div class="industry__wrapper wrapper-calc">
+        <ul class="industry-list">
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-1.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-2.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-3.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-4.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-5.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-6.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-7.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-8.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-9.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-10.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-11.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-12.svg" alt="">
+
+          </li>
+
+          <li class="industry-list__item">
+
+            <img src="img/svg/industry-13.svg" alt="">
+
+          </li>
+
+        </ul>
+        <div class="industry__types">
+          <div class="industry__type industry-item">
+            <div class="industry-item__title"><span class="industry-item__title--big">Пищевая</span>промышленность</div>
+            <div class="industry-item__text">
+              <p>Напитки</p>
+              <p>Консервация</p>
+              <p>Бакалея</p>
+            </div>
+          </div>
+          <div class="industry__type industry-item">
+            <div class="industry-item__title"><span class="industry-item__title--big">Непищевая</span>промышленность</div>
+            <div class="industry-item__text">
+              <p>Химическое производство </p>
+              <p>Строительные товары</p>
+              <p>Фармацевтика</p>
+            </div>
+          </div>
+          <div class="industry__type industry-item">
+            <div class="industry-item__request">
+              <p>Мы будем рады ответить на ваши вопросы</p>
+              <button class="industry-item__button button js-modal-trigger" type="button" data-target="popupSendMessage">отправить
+                запрос </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="news-announces"  >
+      <div class="news-announces__wrapper wrapper-calc">
+        <h2 class="news-announces__headline">
+          <a href="news.html" >Пресс-центр</a>
+        </h2>
+        <div class="news-announces__list js-items">
+          <div class="news-announces__item js-item">
+            <div class="news-announces__content news-card">
+              <button class="edit-button" type="button"><span class="visually-hidden">Редактировать блок </span>
+                <svg>
+                  <use xlink:href="img/svg.svg#edit"></use>
+                </svg>
+              </button>
+              <div class="news-card__bg">
+                <picture>
+                  <source media="(max-width: 768px)" data-srcset="img/new/new1.jpg"><img class="lazyload" data-src="img/new/new1@2x.jpg"
+                    data-srcset="img/new/new1@3x.jpg 3x" alt="">
+                </picture>
+              </div>
+              <div class="news-card__content">
+                <div class="news-card__rubric">новости</div>
+                <h3 class="news-card__headline">
+                  <a href="#" >Технология помогает переработчикам производить натуральные продукты и
+                      напитки</a>
+                </h3>
+                <p class="news-card__bottom">
+                  <span class="news-card__date">12.09.18</span>
+                  <a href="news.html" class="news-card__tag">производство</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="news-announces__item js-item">
+            <div class="news-announces__content news-card">
+              <button class="edit-button" type="button"><span class="visually-hidden">Редактировать блок </span>
+                <svg>
+                  <use xlink:href="img/svg.svg#edit"></use>
+                </svg>
+              </button>
+              <div class="news-card__bg">
+                <picture>
+                  <source media="(max-width: 768px)" data-srcset="img/new/new2.jpg"><img class="lazyload" data-src="img/new/new2@2x.jpg"
+                    data-srcset="img/new/new2@3x.jpg 3x" alt="">
+                </picture>
+              </div>
+              <div class="news-card__content">
+                <div class="news-card__rubric">публикации</div>
+                <h3 class="news-card__headline">
+                  <a href="">
+                      Как оценить и уточнить пищевые смазочные материалы
+                  </a> 
+                </h3>
+                <p class="news-card__bottom">
+                  <span class="news-card__date">12.09.18</span>
+                  <a href="news.html" class="news-card__tag">производство</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="news-announces__item js-item">
+            <div class="news-announces__content news-card">
+              <button class="edit-button" type="button"><span class="visually-hidden">Редактировать блок </span>
+                <svg>
+                  <use xlink:href="img/svg.svg#edit"></use>
+                </svg>
+              </button>
+              <div class="news-card__bg">
+                <picture>
+                  <source media="(max-width: 768px)" data-srcset="img/new/new3.jpg"><img class="lazyload" data-src="img/new/new3@2x.jpg"
+                    data-srcset="img/new/new3@3x.jpg 3x" alt="">
+                </picture>
+              </div>
+              <div class="news-card__content">
+                <div class="news-card__rubric">публикации</div>
+                <h3 class="news-card__headline">
+                  <a href="">
+                      Технологии на защите окружающей среды
+                  </a> 
+                </h3>
+                <p class="news-card__bottom">
+                  <span class="news-card__date">12.09.18</span>
+                  <a href="news.html" class="news-card__tag">производство</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div><a class="news-announces__btn js-btn-more" href="#">показать еще </a>
+      </div>
+    </section>
+    <footer class="page-footer">
+      <div class="page-footer__main">
+        <div class="page-footer__wrapper wrapper-calc">
+          <div class="page-footer__contacts">
+            <div class="page-footer__copyright">Copyright ©2019. AFR</div>
+            <div class="page-footer__phones"><a class="page-footer__mail" href="mailto:sales@afr.com.ru">sales@afr.com.ru,</a><a
+                class="page-footer__tel" href="tel:+7(812)331-20-27">+7 (812) 331-20-27,</a><a class="page-footer__tel"
+                href="tel:+7(812)331-20-28">+7 (812) 331-20-28</a></div>
+            <div class="page-footer__links"><a href="#">Обратная связь</a><a href="#">Глоссарий</a></div>
+            <a href="" class="page-footer__fb">
+              <img src="img/svg/fb.svg" style="max-width: 20px;" /> 
+            </a>
+            <div class="page-footer__create"><span>разработка</span><a href="http://greenlabs.ru/" target="_blank">
+                <svg>
+                  <use xlink:href="img/svg.svg#greenlabs"> </use>
+                </svg></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div class="modal-overlay js-modal" id="popupSearch">
+      <div class="modal _search modal--line">
+        <button class="modal__close js-close" data-target="popupSearch" type="button"></button>
+        <div class="modal__inner">
+          <div class="right-panel modal__right-panel"><div class="right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
+              <svg width="30" height="22">
+                <use xlink:href="img/svg.svg#mail-sm"></use>
+              </svg></div></div>
+          <form class="modal-form" action="#" method="post">
+            <div class="modal-form__field-wrapper"><div class="modal-form__mail js-modal-trigger" data-target="popupSendMessage" >
+                <svg width="30" height="22">
+                  <use xlink:href="img/svg.svg#mail-sm"></use>
+                </svg></div>
+              <label class="modal-form__label" for="search-field"><span class="visually-hidden">Поиск</span>
+                <svg width="28" height="28">
+                  <use xlink:href="img/svg.svg#search-sm"></use>
+                </svg>
+              </label>
+              <input class="modal-form__field" type="text" id="search-field">
+              <button class="modal-form__clear js-clear" type="button"><span class="visually-hidden">очистить </span>
+                <svg width="16" height="16">
+                  <use xlink:href="img/svg.svg#clear"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section class="popup js-modal" id="popupSendMessage">
+      <h1 class="visually-hidden">Обратная связь</h1>
+      <button class="popup__btn-close js-close" data-target="popupSendMessage" type="button"><span class="visually-hidden">Закрыть</span>
+        <svg width="25" height="25">
+          <use xlink:href="img/svg.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="send-message">
+          <div class="right-panel send-message__right-panel"><div class="right-panel__mail" data-target="popupSendMessage" >
+              <svg width="30" height="22">
+                <use xlink:href="img/svg.svg#mail-sm"></use>
+              </svg></div>
+            <div class="right-panel__search">
+              <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
+                <svg width="28" height="28">
+                  <use xlink:href="img/svg.svg#search-sm"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <form class="form popup__form vacancy-test__form send-message__form" id="form" action="#" method="post">
+            <div class="send-message__title">Обратная связь</div>
+            <div class="send-message__text">
+              <p>Здесь вы можете отправить нам запрос, уточнить информацию или просто познакомиться. Мы с удовольствием
+                вам ответим.</p>
+            </div>
+            <div class="form__item select-form">
+              <select class="js-select select-form__group" name="theme" id="theme">
+                <option class="select-form__option" value="">Тема</option>
+                <option class="select-form__option" value="theme-1">Тема 1</option>
+                <option class="select-form__option" value="theme-2">Тема 2</option>
+                <option class="select-form__option" value="theme-3">Тема 3</option>
+              </select>
+            </div>
+            <div class="form__item input-form">
+              <input class="input-form__input" type="text" name="phone" id="phone">
+              <label class="input-form__label" for="phone">Телефон</label>
+            </div>
+            <div class="form__item input-form">
+              <input class="input-form__input" type="text" name="name" id="name">
+              <label class="input-form__label" for="name">Имя</label>
+              <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
+            </div>
+            <div class="form__item input-form">
+              <input class="input-form__input" type="text" name="email" id="email">
+              <label class="input-form__label" for="email">e-mail *</label>
+              <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
+            </div>
+            <div class="form__item textarea-form">
+              <textarea class="textarea-form__textarea" name="message" id="message"></textarea>
+              <label class="textarea-form__label" for="message">Сообщение *</label>
+              <div class="form__tooltip form__tooltip--empty" style="display: block;" >поле не заполнено</div>
+            </div>
+            <div class="form__bottom">
+              <div class="form__item checkbox-form">
+                <input class="checkbox-form__input" type="checkbox" name="accept" id="accept">
+                <label class="checkbox-form__label" for="accept">Согласие на обработку персональных данных в
+                  соответствии с <a class='checkbox-form__link' href='#'>Пользовательским соглашением</a> </label>
+                <div class="form__tooltip form__tooltip--empty checkbox-form__tooltip" style="display: block;">подтвердите согласие, пожалуйста</div>
+              </div>
+              <div class="input-form__file-wrapper">
+                <input class="input-form__file" type="file">
+                <div class="form__tooltip form__tooltip--empty" style="display: block;">некорректный тип файла</div>
+              </div>
+            </div>
+            <button class="form__submit" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="popup js-modal" id="popupSendMessageSuccess">
+      <h1 class="visually-hidden">Мы получили ваше сообщение и уже работаем с ним. Спасибо!</h1>
+      <button class="popup__btn-close js-close" data-target="popupSendMessage" type="button"><span class="visually-hidden">Закрыть</span>
+        <svg width="25" height="25">
+          <use xlink:href="img/svg.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="send-message">
+          <div class="right-panel send-message__right-panel"><div class="right-panel__mail js-modal-trigger" data-target="popupSendMessage" >
+              <svg width="30" height="22">
+                <use xlink:href="img/svg.svg#mail-sm"></use>
+              </svg></div>
+            <div class="right-panel__search">
+              <button class="search-trigger js-modal-trigger" type="button" data-target="popupSearch"><span class="visually-hidden">Поиск</span>
+                <svg width="28" height="28">
+                  <use xlink:href="img/svg.svg#search-sm"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="popup__form vacancy-test__form send-message__form">
+            <div class="send-message__text">
+              <p>Мы получили ваше сообщение и уже работаем с ним.</p>
+              <p>Спасибо!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <div class="copy-tooltip-overlay">
+
+    <div class="copy-tooltip">
+
+      <div class="copy-tooltip__close">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="#000" fill-rule="evenodd" d="M12.213 10.799l9.9-9.9 1.414 1.415-9.9 9.9 9.9 9.899-1.414 1.414-9.9-9.9-9.9 9.9L.9 22.113l9.9-9.9-9.9-9.9L2.314.9l9.9 9.9z" />
+        </svg>
+
+      </div>
+
+      <div class="copy-tooltip__content">
+
+        <p>Мы с уважением относимся к авторским правам и конфиденциальной информации, поэтому возможность скачивания
+          материалов с сайта по умолчанию ограничена.</p>
+
+        <p>Сообщите нам, какой контент и для какой цели вам требуется, и мы поможем вам собрать данные без нарушения
+          чьих-либо прав.</p>
+
+      </div>
+
+      <button class="copy-tooltip__btn">Отправить запрос</button>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="js/libs/jquery-3.2.1.min.js"></script>
+  <script src="js/libs/svg4everybody.min.js"></script>
+  <script src="js/libs/picturefill.min.js"></script>
+  <script src="js/libs/lazysizes.min.js"></script>
+  <script src="js/libs/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/libs/swiper.min.js"></script>
+  <script src="js/init-swiper.js"></script>
+</body>
+
+</html>
